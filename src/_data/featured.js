@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const WEEK = 7 * 24 * 3600 * 1000;
-const EPOCH = Date.parse("2025-01-04T00:00:00Z"); // week 0 = first post; 200-week cycle starts here
+const EPOCH = Date.parse("2025-08-15T00:00:00Z"); // week 0 = first post (one year before site launch); 200-week cycle starts here
 
 module.exports = function () {
   const dir = path.join(__dirname, "..", "posts");

@@ -1,1051 +1,1021 @@
-// Auto-generated FAQ data for The AI Leader's Mind. Grounded in the book; ASCII-only, no em-dashes.
+// Auto-generated FAQ: real user problems, answered from the book's evidence. ASCII, no em-dashes.
 module.exports = {
   "groups": [
     {
-      "category": "About the book",
+      "category": "Your job and career",
+      "id": "your-job-and-career",
       "items": [
         {
-          "q": "What is The AI Leader's Mind about?",
-          "a": "It is about the human side of leading in an AI-driven world. Not the technology, but the person using it, and the inner work that decides whether AI makes a leader sharper or slowly replaceable. It covers judgment, trust, empathy, resilience, and ethics when a machine is in the room."
+          "q": "Will AI replace managers and leaders?",
+          "a": "Not the human core of the job. AI can analyze, draft, and recommend, but it cannot own a decision, hold a team's trust, or give people a reason to care. The evidence points the same way: as routine work moves to machines, judgment, responsibility, and relationships become more valuable, not less. Your role shifts toward those, not away from them."
         },
         {
-          "q": "Who wrote The AI Leader's Mind?",
-          "a": "Gaurav Srivastava, who has spent twenty years in technology and consulting, working where technology meets human behavior. He wrote it after watching capable leaders make sharp technical calls that quietly hollowed out the people around them."
+          "q": "My team is scared AI will take their jobs. What do I say?",
+          "a": "Start with the fear, not a reassuring slide. People rarely believe that nothing will change while they watch the tool do part of their work. What lands is honesty plus a path: name what the machine will take, then show the part of their role that grows in value, and help them move toward it. A fear with a concrete next step stops being paralyzing."
         },
         {
-          "q": "Is The AI Leader's Mind a technical or coding book?",
-          "a": "No. There is no code and no jargon. It is a leadership book that draws on how AI actually behaves, but its subject is human judgment, trust, and ethics, the parts of leading a model cannot do for you."
+          "q": "What jobs and skills are safest as AI spreads?",
+          "a": "The durable ones are not tasks a model can copy but capacities it cannot: judgment under uncertainty, owning a decision, building trust, and reading what the data misses. The ability to keep learning is a meta-skill that outlasts any single tool. Tie your value to those, not to one skill the next model might absorb."
         },
         {
-          "q": "What formats is the book available in?",
-          "a": "A Kindle edition and a paperback, both on Amazon. The Kindle edition runs 258 pages and the paperback runs 243 pages."
+          "q": "Should I worry about my career if AI can do most of my job?",
+          "a": "Worry is reasonable; despair is not. The move is to redraw your value around what the machine cannot do. Much of what felt core to your work was mechanics the tool now handles. What remains, judgment, responsibility, and the trust you hold with people, is the harder and more human part, and it is where a career becomes more secure, not less."
         },
         {
-          "q": "How long is The AI Leader's Mind?",
-          "a": "The paperback is 243 pages across twelve chapters and a set of appendices, which include case studies, a single decision tool, further reading, and full sources."
+          "q": "How do I help an expert whose skill AI now imitates?",
+          "a": "Do not defend the old skill. Help them move their value. The specific task may be automatable, but the judgment and experience underneath it usually are not, and they matter more now because they tell you when the machine is wrong. Frame it as a promotion, from doing the work to knowing when the work is right."
         },
         {
-          "q": "What will I learn from the book?",
-          "a": "How to spot the biases AI amplifies, build calibrated trust, lead people through fear of change, stay resilient when systems fail, make hard ethical calls with one repeatable framework, and run a daily habit that keeps your judgment growing."
+          "q": "Is it true AI helps junior people more than seniors?",
+          "a": "Research on generative assistants at work found the largest gains for the least experienced, in one study a 34 percent lift for newer workers against 14 percent on average. That is encouraging and a warning: tools level up beginners fast, which raises the value of the seasoned judgment that catches a confident output when it is wrong."
         },
         {
-          "q": "Is the book backed by research?",
-          "a": "Yes. It draws on neuroscience, cognitive and behavioral science, and the research on trust and habit, each source named and cited. Its frameworks are tested against real decisions like hiring, lending, fraud, and crisis."
+          "q": "How many people actually use AI at work now?",
+          "a": "Adoption is already broad. Roughly half of US adults use AI chatbots, and workplace use climbs every month. The practical point is that this is not a future to prepare for but a present to lead in, which is why the focus belongs on the human skills you need now rather than on the technology itself."
         },
         {
-          "q": "Why should a leader read this now?",
-          "a": "Because AI is arriving faster than the wisdom to lead with it. Roughly half of US adults already use AI chatbots, and the tools reshape decisions every month. The book is about keeping your judgment and humanity as that happens."
-        }
-      ],
-      "id": "about-the-book"
-    },
-    {
-      "category": "Who it is for",
-      "items": [
-        {
-          "q": "Who is The AI Leader's Mind for?",
-          "a": "CEOs, executives, managers, team leaders, and founders navigating AI, and anyone who would rather AI made them more capable than more replaceable."
+          "q": "Will AI make leadership easier or harder?",
+          "a": "Both. It removes drudgery and adds reach, and it raises the stakes on judgment, trust, and ethics, because a confident tool can scale a mistake fast. The technical part gets easier and the human part gets harder and more important, which is exactly the part that was always the real job."
         },
         {
-          "q": "Is this book useful for new or first-time managers?",
-          "a": "Yes. It gives a first-time manager a clear way to use AI without deferring to it blindly, and the habits to build judgment early rather than outsource it before it forms."
+          "q": "Do I need to become technical to lead with AI?",
+          "a": "No. You need to understand how the tools behave, where they fail, and how they shape your thinking, not how to build them. The scarce skill is not coding; it is the judgment to use a capable, fallible tool well and to keep your people capable alongside it."
         },
         {
-          "q": "Is it relevant for senior executives and CEOs?",
-          "a": "Very. The hardest AI decisions in hiring, lending, layoffs, and crisis land at the top, and the book gives senior leaders a way to own those calls rather than hide behind the model."
-        },
-        {
-          "q": "Do I need an AI or technical background to read it?",
-          "a": "No. It assumes no technical knowledge. If you use or oversee AI tools at work, that is enough."
-        },
-        {
-          "q": "Is the book only for people in tech companies?",
-          "a": "No. It uses examples from healthcare, finance, hiring, education, and crisis response. Any leader whose decisions are shaped by AI will find it relevant."
-        },
-        {
-          "q": "Can individual contributors benefit, not just managers?",
-          "a": "Yes. Anyone who makes judgment calls with AI can use the habits for keeping their thinking sharp and their skills from fading."
-        },
-        {
-          "q": "Is it useful for HR and people leaders?",
-          "a": "Yes. It deals directly with fear of change, resistance, trust, and the ethics of automated decisions about people, which sit at the center of HR work."
-        },
-        {
-          "q": "Would this help someone worried about AI taking their job?",
-          "a": "Yes. A central chapter is about redrawing your value around what a machine cannot do, so you become harder to replace rather than easier."
-        }
-      ],
-      "id": "who-it-is-for"
-    },
-    {
-      "category": "AI and the future of leadership",
-      "items": [
-        {
-          "q": "Will AI replace leaders and managers?",
-          "a": "Not the human core of the job. AI can analyze, draft, and recommend, but it cannot own a decision, hold trust, or give people meaning. The book argues those grow more valuable, not less."
-        },
-        {
-          "q": "What can AI not do that human leaders can?",
-          "a": "Take responsibility for a call, read what is not in the data, hold trust with real people, decide what is worth optimizing for, and stay present in the moments that matter."
-        },
-        {
-          "q": "How is AI changing the way leaders think?",
-          "a": "It shifts leaders from doing the analysis to judging the machine's analysis; that sounds small, but it changes where attention, doubt, and skill have to live."
-        },
-        {
-          "q": "What are the three phases of AI in leadership?",
-          "a": "Assisted, where AI speeds up tasks you already do. Augmented, where it shapes the options you see. And symbiotic, where the work is genuinely shared. Most leaders are further along than they think."
-        },
-        {
-          "q": "Is AI leadership just hype?",
-          "a": "The tools are real and already changing decisions. The book cuts the hype by focusing not on the technology but on the durable human skills that decide whether it helps or harms."
-        },
-        {
-          "q": "What is human-AI collaboration in leadership?",
-          "a": "It is working with a machine as a capable but limited partner, using its speed and reach while keeping the judgment, responsibility, and care that only a person brings."
-        },
-        {
-          "q": "Does using AI make leaders better or worse?",
-          "a": "Either, depending on how it is used. Used well it sharpens judgment; used lazily it erodes the skill it was meant to support. The book is about staying on the right side of that line."
-        },
-        {
-          "q": "What is the biggest risk AI poses to leaders?",
-          "a": "Quiet deskilling. Leaning on AI for every call can thin the judgment the job depends on, the same way constant GPS use weakens your sense of direction."
+          "q": "What is the biggest risk AI poses to a leader?",
+          "a": "Quiet deskilling. Leaning on AI for every call can thin the judgment the job depends on, the way heavy reliance on turn-by-turn navigation is linked to weaker memory for finding your own way. You feel more productive while becoming less capable, and the two trends hide each other until the day the tool fails."
         },
         {
           "q": "How do I stay relevant as a leader as AI keeps advancing?",
-          "a": "Move your value to what machines cannot do, keep your judgment in active use, and build the meta-skill of learning fast as the tools keep changing."
-        },
-        {
-          "q": "What does the future of leadership look like with AI?",
-          "a": "More capability and more temptation to coast. The book's closing vision is leaders who use AI to become more human in their work, and who treat every AI-shaped decision as practice."
+          "a": "Move your value to what machines cannot do, keep your judgment in active use instead of outsourcing it, and get good at learning the next tool fast. Adaptability is the meta-skill that compounds while specific skills age out. Relevance comes from staying the person who decides well and keeps people capable, not from mastering any one system."
         }
-      ],
-      "id": "ai-and-the-future-of-leadership"
+      ]
     },
     {
-      "category": "Making decisions with AI",
+      "category": "Getting your team on board",
+      "id": "getting-your-team-on-board",
       "items": [
         {
-          "q": "How should leaders make decisions with AI?",
-          "a": "Form your own view first, then compare it with the model's, and treat the gap as the place where real thinking happens. The person, not the machine, owns the final call."
+          "q": "How do I get my team to actually use the new AI tools?",
+          "a": "Adoption follows safety, not pressure. Find the fear under the resistance, name it, and give people a concrete role on the other side. Let them be beginners without an audience, reward the ones who question the tool, and show a believable picture of the work after the change. People move toward a future they can see themselves in."
         },
         {
-          "q": "When should I trust an AI recommendation?",
-          "a": "When the model has a track record on that specific kind of task and your own reasoning agrees. Trust it less where it has been wrong, or where the stakes are human and hard to measure."
+          "q": "Why do rational arguments about AI fail to convince people?",
+          "a": "Because resistance is usually a feeling, and feelings do not yield to spreadsheets. A sharper productivity slide often deepens resistance by signaling you care about the number, not the person. The psychology of change is clear that people adopt once they feel understood. Name the fear, let them feel heard, and only then does the evidence land."
         },
         {
-          "q": "How do I know when to override the AI?",
-          "a": "When your independent read conflicts with the model and you can name why. Hesitation is often pattern recognition running ahead of your words, worth a sentence out loud before you decide."
+          "q": "My best person refuses to touch the tool. What do I do?",
+          "a": "Get curious before you push. Stubbornness is usually a fear in disguise, and which fear differs by person: replacement, looking incompetent, or losing control. Ask, and actually listen. You cannot argue someone out of a fear you have not named, and the refusal is rarely about the tool itself."
         },
         {
-          "q": "What is a good decision-making framework for AI?",
-          "a": "The book's model moves through five layers: the machine's input, your own read, the gap between them, a human check on who is affected, and a final call owned by a person."
+          "q": "How do I roll out AI without wrecking morale?",
+          "a": "Lead the human transition, not just the technical one. Be honest about what is changing, protect people's dignity and sense of value, and make it safe to raise doubts. Morale breaks when people feel managed by a machine rather than led by a person, so keep yourself visibly in the loop and on their side."
         },
         {
-          "q": "How do I avoid rubber-stamping AI outputs?",
-          "a": "Decide before you look. If you cannot say what you thought before the model told you, you were not deciding, you were deferring."
+          "q": "My team is exhausted by change. How do I add one more tool?",
+          "a": "Respect the fatigue as real information, not resistance to crush. People who have been through too many passing initiatives are right to conserve energy. Be clear about what is genuinely different this time and why it will stick, do not dress up a small tool as a revolution, and give them a reason to spend the energy."
         },
         {
-          "q": "What if the AI is confident but I am unsure?",
-          "a": "Say what the model recommends, then say what gives you pause, and let both sit for a moment. Certainty on a screen is not the same as being right."
+          "q": "How do I handle someone who loves the tool but ignores its flaws?",
+          "a": "Pair their enthusiasm with someone else's skepticism. Early adopters spread both the value and the failure modes fast, because they are looking for wins, not weaknesses. Value their energy, and make questioning the tool a normal, rewarded thing so the flaws get caught before they scale."
         },
         {
-          "q": "How can AI improve decision quality?",
-          "a": "By widening the options you consider and catching patterns you would miss, as long as you use it to sharpen your judgment rather than replace it."
+          "q": "What is the right first step when introducing AI to a team?",
+          "a": "Make it safe to be a beginner. Before the training or the targets, remove the fear of looking foolish: share your own fumbling, take away the audience for early attempts, and signal that questions are welcome. Competent people fear incompetence most, and a safe start dissolves resistance that pressure would harden."
         },
         {
-          "q": "What is calibrated trust in AI?",
-          "a": "Relying on a tool exactly as much as it has earned, task by task, rather than trusting or doubting it across the board. It is a dial, not a switch."
+          "q": "How do I lead an AI change when I am uneasy about it myself?",
+          "a": "Honestly. You do not have to be fearless, only a step ahead. Faked confidence is thin and people feel through it. Naming your own uncertainty while still moving is more credible and more calming than pretended calm, and it makes the team's fear normal enough to work through."
         },
         {
-          "q": "How do I keep my judgment sharp while using AI?",
-          "a": "Make some calls without the model, do the estimate before you check it, and treat judgment like fitness, something that fades without use."
+          "q": "Should I force adoption or let it happen gradually?",
+          "a": "Neither extreme works. Forcing breeds quiet sabotage. Drifting leaves the tool unused. Set a clear direction, make the case by addressing fears first, and let people work through their doubts. A slow yes that holds under pressure is worth far more than a fast one that collapses at the first friction."
         },
         {
-          "q": "Should leaders let AI make the final decision?",
-          "a": "Not on decisions that carry weight for people. The machine can advise, but a person has to own the call in their own name, or accountability disappears."
+          "q": "How do I tell if my team's resistance is fear or a real warning?",
+          "a": "Ask, and take the answer seriously. Sometimes resistance is fear you can help with; sometimes the person refusing the tool is the first to sense a real flaw. A leader who treats all pushback as an obstacle wins the argument and loses the early warning. Get curious before you override."
+        },
+        {
+          "q": "How do I explain to my team why we are adopting AI at all?",
+          "a": "Give them a story they can locate themselves in, not just facts. People fill a narrative gap with fear, usually the version where they are unnecessary. An honest account of where the team is heading and how each person fits turns a threatening change into a shared direction."
         }
-      ],
-      "id": "making-decisions-with-ai"
+      ]
     },
     {
-      "category": "Cognitive bias and AI",
+      "category": "Stopping blind trust in AI",
+      "id": "stopping-blind-trust",
       "items": [
         {
-          "q": "What cognitive biases affect human-AI teams?",
-          "a": "Four stand out: automation bias, confirmation bias, anchoring, and availability bias. Each is normal, and each is amplified when a confident machine is involved."
+          "q": "My team just accepts whatever the AI says. How do I fix that?",
+          "a": "Bring back friction on purpose. Have people form their own view before the tool speaks, so they have something to compare against, and treat an unquestioned output as a warning sign rather than a success. Reward the person who challenges the model. A team that has quietly stopped questioning is coasting toward the error it will not see."
         },
         {
-          "q": "What is automation bias?",
-          "a": "The habit of trusting an automated answer over the evidence in front of you. It is why people follow a navigation system into a field, and why leaders wave through a model they should have checked."
+          "q": "How do I stop myself from over-trusting a confident AI answer?",
+          "a": "Notice the relief. When accepting an answer feels like a weight lifting, treat that as a flag, not a green light, because relief shows up most on the decisions that mattered most. Before you accept a call that counts, say what you would have decided on your own, then compare."
         },
         {
-          "q": "How does AI worsen confirmation bias?",
-          "a": "A capable model can generate fluent support for almost any position, so it hands you a well-argued version of what you already believed. It becomes a mirror, not a check."
+          "q": "How much should I trust an AI recommendation?",
+          "a": "Exactly as much as it has earned on that kind of task, no more. Trust is a dial, not a switch. A model can be excellent at forecasting demand and poor at judging a person, so trusting it evenly across both is not fairness, it is laziness. Keep an honest track record and move the dial as evidence comes in."
         },
         {
-          "q": "What is anchoring bias with AI?",
-          "a": "When a model names a number first, that figure quietly becomes the reference everyone argues around. Precise outputs feel authoritative even when they were guesses."
+          "q": "What is automation bias and how do I avoid it?",
+          "a": "Automation bias is the habit of trusting an automated answer over the evidence in front of you. It is why people follow a navigation system into a field. The counter-move is small: before accepting a recommendation that matters, state what you would have decided on your own, then compare. If you cannot say what you thought first, you were deferring, not deciding."
         },
         {
-          "q": "What is availability bias in an AI context?",
-          "a": "Treating what the dashboard shows as all that matters. The countable crowds out the things no metric captures, like morale or trust."
+          "q": "The tool has been reliable for months. Can I stop checking it?",
+          "a": "That is exactly when the risk grows. A good track record breeds inattention, so the one time the tool is badly wrong is often the one time no one is looking. This is automation complacency. Keep some scrutiny alive on your most reliable systems, spot-checking the outputs you would otherwise wave through."
         },
         {
-          "q": "How do I reduce automation bias?",
-          "a": "Before accepting a recommendation that matters, state what you would have decided on your own, then compare. That comparison is the safeguard."
+          "q": "How do I keep people reviewing AI output instead of rubber-stamping it?",
+          "a": "Make review mean something. If a person would approve anything the tool produced, they are not reviewing, they are signing. Ask them what the output would have to say for them to reject it. If they cannot answer, the review was theater, and it is worth catching before the habit fails on the day the output is wrong."
         },
         {
-          "q": "How can I use AI to fight my own bias?",
-          "a": "Ask it to argue the opposite of what you want, or to name what would have to be true for your plan to fail. A tool that only agrees is an echo."
+          "q": "How do I tell real analysis from an answer that just sounds confident?",
+          "a": "Judge the substance, not the delivery. A model is fluent whether it is right or wrong, so confidence carries no information. Ask what the claim rests on, what would make it false, and what the tool cannot see. The most dangerous answers are the ones that sound too polished to question."
         },
         {
-          "q": "Do cognitive biases compound with AI?",
-          "a": "Yes. A model names a number, you anchor, it fits your hope so confirmation waves it through, it hits the dashboard so it feels important, and no one asks where it came from."
+          "q": "Is it possible to trust AI too much?",
+          "a": "Yes, and it is the more common failure. Over-trust looks like relief and feels like efficiency, right up until the day the model is confidently wrong. Doubt is effortful and deferring is a rest, which is why the seduction is strongest on exactly the hard decisions where your judgment mattered most."
         },
         {
-          "q": "Which bias am I most likely to fall for?",
-          "a": "The book includes a short self-check for this, because the bias you cannot see in yourself is the one that costs you. Awareness in the moment is the whole skill."
+          "q": "How do I set the right level of trust for a specific tool?",
+          "a": "Keep score, task by task. Ask where this system has been reliable and where it has burned you, trust the strong areas more and the weak ones less, and be ready to update as the evidence changes. The goal is neither blanket faith nor blanket doubt but a trust that has been earned in pieces."
         },
         {
-          "q": "Can AI itself be biased?",
-          "a": "Yes, and it can scale its bias faster than any person. The leader's job is to catch it before a model spreads it across the organization."
+          "q": "What is calibrated trust and how do I build it?",
+          "a": "It is relying on a tool exactly as much as it has earned, and it is hard because the brain prefers one setting for everything. Build it by making the ledger explicit: write down where the tool has proven reliable and where it has not, rather than trusting your gut to remember. Calibration is a habit, not a one-time verdict."
+        },
+        {
+          "q": "How do I stop deferring to the model on hard decisions?",
+          "a": "Decide before you look. Form a rough view and, on calls that matter, write it down before you open the tool, so the model's confident answer cannot quietly become the view you think you always held. Keeping your own opinion alive is what leaves you something to trust on the day the tool is wrong."
         }
-      ],
-      "id": "cognitive-bias-and-ai"
+      ]
     },
     {
-      "category": "Trust in AI and teams",
+      "category": "Keeping skills sharp",
+      "id": "keeping-skills-sharp",
       "items": [
         {
-          "q": "How do you build trust in AI at work?",
-          "a": "By matching reliance to the tool's real record, being honest about where it fails, and making it safe for people to question it. Trust that cannot be questioned is just silence."
+          "q": "Am I losing my own skills by relying on AI?",
+          "a": "Possibly, and you would not feel it happening. A skill you stop using fades quietly while you feel more productive. The research analogy is navigation: heavy reliance on turn-by-turn directions is linked to weaker memory for finding your own way. Judgment behaves the same, so protect the core skills by using them on purpose."
         },
         {
-          "q": "What is the trust triangle?",
-          "a": "Three trusts that have to stay in balance: trust in the tool, trust in the people who use it, and trust in yourself; over-lean on any one corner and the whole thing tips."
+          "q": "How do I keep my judgment sharp when AI does most of the thinking?",
+          "a": "Treat judgment like fitness, something that fades without use. Make some calls without the model, do the estimate before you check it against the tool, and keep a little deliberate friction in your workflow. The reps you do when it does not matter are what let you perform when it does."
         },
         {
-          "q": "How much should I trust AI?",
-          "a": "Exactly as much as it has earned on that task, no more. Blanket faith invites automation bias, and blanket doubt wastes real help."
+          "q": "Does using AI make people worse at their jobs over time?",
+          "a": "It can, if it replaces the thinking rather than supporting it. The danger is not the dramatic failure but the quiet erosion of the very skill the job depends on, one convenient shortcut at a time. Used to sharpen judgment it helps. Used to skip judgment it slowly hollows people out."
         },
         {
-          "q": "How do I build my team's trust in AI tools?",
-          "a": "Teach them what the tool is for and where it fails, and reward people for raising doubts. The goal is judgment around the tool, not blind use of it."
+          "q": "How do I keep my team's skills from fading as tools take over?",
+          "a": "Build a culture that rewards growth, not just deference. Make it normal to form a view before consulting the tool, to question outputs, and to solve some problems the slow way. A team left on default settings hands more of its judgment to the machine each month, feeling productive while getting less capable."
         },
         {
-          "q": "What if my team over-relies on AI?",
-          "a": "Bring back friction on purpose. Have people form their own view before the tool speaks, and treat unquestioned outputs as a warning sign, not a success."
+          "q": "What is AI deskilling and why should I care?",
+          "a": "Deskilling is the slow loss of a capability you stop using because a machine does it for you. You should care because it is invisible while it happens and only shows up when you need the skill and it is gone, or when the tool fails and no one can function without it."
         },
         {
-          "q": "How do I keep trust in my own judgment?",
-          "a": "Keep forming your own opinion alongside the model's, so the two can be compared. Outsource your view entirely and you have nothing left to trust on the day the tool fails."
+          "q": "How much should I do without AI to stay capable?",
+          "a": "Enough to keep the muscle alive, not so much that you waste the tool. A regular rhythm of unaided calls, estimates, and problems solved the hard way keeps your judgment in practice. It is training, not nostalgia: the point is to be ready for the moment the tool is wrong or gone."
         },
         {
-          "q": "Can you trust AI too much?",
-          "a": "Yes, and it is the more common failure; over-trust looks like relief and feels like efficiency, right up until the day the model is confidently wrong."
+          "q": "How do I balance AI efficiency with keeping my skills?",
+          "a": "Take the efficiency, then reinvest part of it in deliberate practice. Let the tool save the time, and spend some of that time keeping your own judgment sharp. The trap is spending all of it on more volume, which leaves you faster and quietly less capable."
         },
         {
-          "q": "How is trusting AI different from trusting people?",
-          "a": "A person earns trust broadly through character. A tool earns it narrowly, task by task, and can be excellent at one thing and unreliable at another."
+          "q": "Will my team still function if the AI systems go down?",
+          "a": "Only if you have practiced for it. Run the occasional decision as if the tools were unavailable, so an outage is a drill you have rehearsed rather than a crisis you meet helpless. The gaps you find in a calm rehearsal are your homework, the skills to keep alive before you need them."
         },
         {
-          "q": "What breaks trust between a leader and their team around AI?",
-          "a": "Using the tool to replace judgment people were proud of, or punishing those who question it. Trust breaks when people feel managed by a machine instead of led by a person."
+          "q": "How do I coach my team to grow, not just defer, with AI?",
+          "a": "Teach them to form a view first, question outputs safely, own their decisions, and keep practicing the skills the tool could otherwise absorb. Give them problems to work through rather than answers to apply, and reward the questioning. Growth beside a capable tool has to be built on purpose, because the default is comfortable dependence."
+        },
+        {
+          "q": "What skills should I deliberately protect from automation?",
+          "a": "The ones the job actually depends on: judgment under uncertainty, the ability to decide and own the outcome, reading people and situations, and the sense of what matters that no metric captures. Offload the routine and the mechanical freely, and guard the core judgment as something to keep exercising."
         }
-      ],
-      "id": "trust-in-ai-and-teams"
+      ]
     },
     {
-      "category": "Emotional intelligence and empathy",
+      "category": "Fair and ethical AI decisions about people",
+      "id": "fair-and-ethical-decisions",
       "items": [
         {
-          "q": "Does AI reduce the need for emotional intelligence?",
-          "a": "The opposite. As more routine work moves through machines, the human ability to read, connect, and give meaning becomes the scarce and decisive skill."
+          "q": "Is it ethical to use AI to screen job candidates?",
+          "a": "It can be, with care. Two risks dominate: the model learned from past hiring and can reproduce its patterns, and it scores what it can measure while ignoring judgment, temperament, and fit. Use it to handle volume, keep the decision human, and ask who it might be filtering out unfairly before you act on its ranking."
         },
         {
-          "q": "What is algorithmic empathy?",
-          "a": "A machine detecting the pattern of an emotion and producing a fitting response. It is useful for reach, but it does not feel anything, and people can tell the difference on a hard day."
+          "q": "Is it fair to use AI in hiring decisions?",
+          "a": "Fairness is not something the tool can certify for you. Treating everyone the same can be unfair when people start from different places, and a definition narrow enough for a machine to guarantee is usually too narrow. The test is whether you could defend the outcome, in the open, to the person affected."
         },
         {
-          "q": "Can AI replace human empathy in leadership?",
-          "a": "No. It can flag who might need attention and draft routine warmth, but the moments that decide whether a person feels seen still need a real human present."
+          "q": "Can I use AI to help decide layoffs?",
+          "a": "A model can surface information, and it must never own a decision this heavy or become a place to hide from it. The danger is exactly the relief of it feeling less personal. Keep a named person accountable, have them feel the full weight, and deliver the news face to face with honesty and care."
         },
         {
-          "q": "How do I stay emotionally connected to my team while using AI?",
-          "a": "Let the tool handle reach and routine, and spend the time it frees on presence. Use the machine to notice who needs you, then show up yourself."
+          "q": "How do I use AI in performance reviews without dehumanizing people?",
+          "a": "Let the tool assemble the raw material and keep the judgment and delivery human. It sees what was logged, not the context, the growth that has not shown up yet, or the quiet person who held the team together. People can tell being understood from being scored, so bring the context the data missed."
         },
         {
-          "q": "What does AI miss about people?",
-          "a": "Everything outside its data. The performer whose home life is falling apart, the team one resignation from collapse, the customer whose neutral score hides real distress."
+          "q": "Is it ethical to use AI for lending or credit decisions?",
+          "a": "Only with someone accountable for who it refuses. The model can reproduce historical patterns of who was served, its errors fall hardest on people with the least power to contest them, and a high accuracy figure says nothing about who absorbs the wrongful denials. Ask who it refuses, and whether those refusals are fair."
         },
         {
-          "q": "How can leaders protect human connection in an automated workplace?",
-          "a": "By keeping the high-stakes emotional moments off the machine, and treating human attention as the thing worth protecting rather than the thing to optimize away."
-        },
-        {
-          "q": "Does using AI make leaders less empathetic?",
-          "a": "It can, if they let the tool carry the emotional load. The book's counsel is to use it for logistics and keep the human moments human."
-        },
-        {
-          "q": "What is the leader's role in an emotionally intelligent AI culture?",
-          "a": "To model that the tool serves people, not the other way around, and to reward attention and care as much as speed and output."
-        }
-      ],
-      "id": "emotional-intelligence-and-empathy"
-    },
-    {
-      "category": "Fear, resistance, and change",
-      "items": [
-        {
-          "q": "How do I lead my team through AI change?",
-          "a": "Start with the fear underneath the resistance, not the productivity case. People adopt change when they feel understood and safe, not when they are argued into it."
-        },
-        {
-          "q": "Why do employees resist AI?",
-          "a": "Usually fear, not stubbornness. Fear of being replaced, of looking incompetent, of losing control, of no longer mattering, or of a future they cannot picture themselves in."
-        },
-        {
-          "q": "What are the five fears of AI adoption?",
-          "a": "Replacement, incompetence, loss of control, loss of value, and an unimaginable future. Naming the specific fear is what lets you address it."
-        },
-        {
-          "q": "Why do rational arguments about AI fail to persuade?",
-          "a": "Because resistance is a feeling, and feelings do not yield to spreadsheets. A better productivity slide often deepens resistance by signaling you care about the number, not the person."
-        },
-        {
-          "q": "How do I reduce fear of AI in my organization?",
-          "a": "Make space for the fear, name it honestly, and show people a concrete role for themselves on the other side of the change."
-        },
-        {
-          "q": "What if my team's resistance to AI is actually right?",
-          "a": "Sometimes it is. The person refusing a tool may be the first to sense a real flaw. Get curious before you override, or you lose your early warning."
-        },
-        {
-          "q": "How do I help my team feel valued as AI takes over tasks?",
-          "a": "Help each person redraw their value around judgment, relationships, and responsibility, the parts of their work a machine cannot absorb."
-        },
-        {
-          "q": "How do I lead people through fear when I am afraid too?",
-          "a": "Honestly. You do not have to be fearless, only a step ahead. Naming your own uncertainty while still moving is more credible than pretended calm."
-        },
-        {
-          "q": "What is the leader's job during an AI rollout?",
-          "a": "To manage the human transition, not just the technical one. The tool is the easy part. The fear, trust, and identity around it are the real work."
-        }
-      ],
-      "id": "fear-resistance-and-change"
-    },
-    {
-      "category": "Resilience and deskilling",
-      "items": [
-        {
-          "q": "How do leaders stay resilient when AI systems fail?",
-          "a": "By keeping their own judgment in practice so they can still function when the dashboard goes dark, and by spending energy on what they control rather than what they cannot."
-        },
-        {
-          "q": "What is AI deskilling?",
-          "a": "The slow erosion of a skill you stop using because a machine does it for you; convenience feels like progress while capability quietly declines."
-        },
-        {
-          "q": "How do I avoid losing my skills to AI?",
-          "a": "Keep the muscle in use on purpose. Make some decisions unaided, keep a little friction in your workflow, and treat judgment like fitness that fades without exercise."
-        },
-        {
-          "q": "Does AI make us worse at thinking?",
-          "a": "It can. The research on navigation links heavy reliance on GPS to weaker spatial memory, and the same pattern can reach judgment if every call is outsourced."
-        },
-        {
-          "q": "Why does the book use Stoic philosophy?",
-          "a": "Because the Stoic split between what you control and what you do not is a practical tool for a moment of fast, uncontrollable change. It aims your energy where it can actually work."
-        },
-        {
-          "q": "How can Stoicism help leaders work with AI?",
-          "a": "It steadies you by separating the technology's pace, which you cannot control, from your own learning, care, and judgment, which you can."
-        },
-        {
-          "q": "How do I keep my team resilient during AI change?",
-          "a": "Give them stable ground: a clear sense of what stays theirs, honest information, and practice making calls so their confidence does not depend on the tool."
-        },
-        {
-          "q": "What mindset helps leaders adapt to AI?",
-          "a": "Holding your expertise lightly enough to update it, treating tools as temporary, and valuing the ability to keep learning over mastery of any one system."
-        },
-        {
-          "q": "How do I balance efficiency from AI with keeping my skills?",
-          "a": "Take the efficiency, but reinvest some of it in deliberate practice. Let the tool save time, then spend part of that time keeping your own judgment sharp."
-        }
-      ],
-      "id": "resilience-and-deskilling"
-    },
-    {
-      "category": "Ethics and responsibility",
-      "items": [
-        {
-          "q": "How do leaders make ethical decisions with AI?",
-          "a": "By keeping a person accountable for every high-stakes call and asking a short set of questions before the model gets the last word. Ethics leaves the room the moment a decision belongs to no one."
-        },
-        {
-          "q": "What questions should I ask before letting AI decide?",
-          "a": "Who is affected and cannot push back, what the model optimizes for and ignores, where its data comes from, what happens to the person it gets wrong, and whether you could explain the call to their face."
-        },
-        {
-          "q": "Who is responsible when AI makes a bad decision?",
-          "a": "A person has to be. The book's stance is that the leader who deployed and relied on the tool owns the outcome, not the model."
-        },
-        {
-          "q": "Is it ethical to use AI for hiring decisions?",
-          "a": "It can be, with care. The danger is treating an accuracy score as if it settled the ethics, and forgetting the real people behind the percentage it gets wrong."
-        },
-        {
-          "q": "What are the main ethical traps with AI?",
-          "a": "Hiding behind the machine, treating a number as if it answered the moral question, and moving so fast that the moment to pause never arrives."
+          "q": "Who is responsible when an AI decision harms someone?",
+          "a": "A person has to be. A model cannot be accountable, and a decision that belongs to no one gets no one's care. Name the person the decision stops with before it is made, in their own name, as if the tool had only advised. Ownership pulls the attention the decision deserves."
         },
         {
           "q": "How do I know if an AI decision is fair?",
-          "a": "Look at who is affected and cannot object, and whether you could explain the decision to them honestly. Discomfort at that thought is a signal worth trusting."
+          "a": "Look at who is affected and cannot push back, and ask whether you could explain the decision to their face and have it land as just. Discomfort at that thought is a signal worth trusting; it is your sense of fairness noticing what the metrics missed."
         },
         {
-          "q": "What is the smell of trouble in AI ethics?",
-          "a": "A decision no one will put their name to, an explanation that only holds if you do not look closely, or a metric thriving while the people behind it seem worse off."
+          "q": "What should I ask before letting AI decide something important?",
+          "a": "Five questions do most of the work: who is affected and cannot push back, what the model optimizes for and ignores, where its data comes from, what happens to the person it gets wrong, and whether you could explain the call to their face. None need a philosophy degree, only a pause."
         },
         {
-          "q": "How do I handle AI ethics under time pressure?",
-          "a": "Slow down only where it counts. Most calls do not need it, but the ones touching livelihood, freedom, or dignity deserve the pause a fast system will try to skip."
+          "q": "The AI is 90 percent accurate. Is that good enough to use?",
+          "a": "That depends entirely on the other 10 percent. An accuracy score answers a technical question, not a moral one. Ask who the errors fall on and what they cost, because a system that is accurate overall can concentrate its harm on a small group, and the average hides it."
         },
         {
-          "q": "Should there always be a human in the loop?",
-          "a": "For decisions that carry real weight for people, yes. Not as a rubber stamp, but as someone who genuinely owns the call and will answer for it."
+          "q": "How do I make sure a human stays accountable for automated decisions?",
+          "a": "Apply one rule: for every consequential decision the tools shape, name the person it stops with, and make sure they know it stops with them. Not a team, not the process, not the vendor. A named owner reviews more carefully and does not hide behind the model, because the weight is explicitly theirs."
+        },
+        {
+          "q": "How do I handle an ethical AI decision under time pressure?",
+          "a": "Slow down only where it counts. Most calls do not need it, but the ones touching a person's livelihood, freedom, or dignity deserve the pause a fast system will try to skip. Build a deliberate stop into exactly those decisions, because speed is what removes the moment you would have thought."
         },
         {
           "q": "How do I build an ethical AI culture on my team?",
-          "a": "Make it safe to raise doubts, insist that decisions have owners, and reward people for asking the uncomfortable question before the model ships an answer."
+          "a": "Make it safe to raise doubts, insist that decisions have named owners, and reward the person who asks the uncomfortable question before the model ships an answer. A checklist gets filled out on autopilot. A culture asks the question that matters in the moment, which is what actually catches harm."
         }
-      ],
-      "id": "ethics-and-responsibility"
+      ]
     },
     {
-      "category": "Putting it into practice",
+      "category": "AI versus your own judgment",
+      "id": "ai-versus-your-judgment",
       "items": [
         {
-          "q": "How do I start leading well with AI this week?",
-          "a": "Pick one recurring decision, form your own view before you open the tool, and compare. That single habit rebuilds the judgment most workflows quietly erode."
+          "q": "The AI recommendation contradicts my gut. What should I do?",
+          "a": "Treat the disagreement as information, not a tie to break by deferring. Say what the model recommends and what gives you pause, and look for what each of you is seeing that the other is not. Your hesitation is often pattern recognition running ahead of your words, worth a sentence before you overrule it."
         },
         {
-          "q": "What is one habit that improves decisions with AI?",
-          "a": "Decide first, then check. Forming an independent read before the model speaks keeps you in the loop and keeps your judgment in training."
+          "q": "How do I decide when to override the AI?",
+          "a": "When your independent read conflicts with the model and you can name why. The point is not to override to prove you can, which is ego, but to keep your own view alive alongside the tool's so the two can actually be compared. Decide deliberately rather than defaulting to the screen."
         },
         {
-          "q": "How do I run a meeting where AI shaped the recommendation?",
-          "a": "Surface the model's input, then ask each person for their own read before discussing the gap. Protect the independent views before the anchor sets."
+          "q": "When should I trust the AI over my own judgment?",
+          "a": "When it has a track record on that specific kind of task and your own reasoning agrees. Trust it less where it has been wrong, or where the stakes are human and hard to measure. Trust is local: it should differ across the day depending on the task, and that variation is accuracy, not indecision."
         },
         {
-          "q": "How do I coach my team to use AI well?",
-          "a": "Teach them to form a view first, question outputs safely, own their decisions, and keep practicing the skills the tool could otherwise absorb."
+          "q": "I froze on a decision the AI was confident about. What went wrong?",
+          "a": "Nothing, if you used the moment. The hardest call is when the model is sure and you are not, and going along feels safe while disagreeing feels like arrogance. Buy yourself a sentence: state the recommendation, then state your doubt, and let both sit. Certainty on a screen is not the same as being right."
         },
         {
-          "q": "What should I do when AI and my gut disagree?",
-          "a": "Treat the disagreement as information. Say both out loud, look for what each is seeing, and decide deliberately rather than defaulting to the screen."
+          "q": "How do I make good decisions with AI instead of just accepting its answer?",
+          "a": "Form your own view first, then compare it with the model's, and treat the gap between them as where the real thinking happens. The person, not the machine, owns the final call. Skip your own read and you are deferring; skip the gap and you miss the most useful signal in the room."
         },
         {
-          "q": "How often should I make decisions without AI?",
-          "a": "Often enough to keep the skill alive. The book suggests deliberately unaided calls as practice, the way you would train any capacity you did not want to lose."
+          "q": "What is a simple framework for deciding with AI?",
+          "a": "Move through five quick layers: the machine's input, your own independent read, the gap between them, a human check on who is affected and what cannot be measured, and a final call owned by a person. On most decisions it takes seconds. The point is to keep a person deciding rather than clicking along."
         },
         {
-          "q": "What is the single most important idea in the book?",
-          "a": "That every AI-shaped decision is a vote for the leader you are becoming, and that judgment, trust, and care grow or fade based on how you cast it."
+          "q": "How do I avoid rubber-stamping AI recommendations?",
+          "a": "Decide before you look. If you cannot say what you thought before the model told you, you were not deciding, you were deferring. A written pre-commitment on calls that matter also stops you from convincing yourself, once the answer is on screen, that you thought that all along."
         },
         {
-          "q": "Does the book include practical tools or just ideas?",
-          "a": "Both. Each chapter ends with concrete steps, and the appendices include case studies and a single decision tool the whole book comes down to."
+          "q": "How do I run a meeting where the AI already gave an answer?",
+          "a": "Protect the independent views before the anchor sets. Surface the model's input, then ask each person for their own read before you discuss the gap. Otherwise the confident output becomes an authority no one wants to question, and the room agrees with a machine it privately doubts."
         },
         {
-          "q": "How do I measure something as soft as judgment?",
-          "a": "Not with a dashboard. The book offers signals to watch instead, like whether you can still explain your reasoning without the tool and whether your team feels led by a person."
+          "q": "Should I let AI make the final call on anything?",
+          "a": "Not on decisions that carry weight for people. The machine can advise; a person has to own the call in their own name, or accountability disappears. On low-stakes, reversible calls, let the tool move fast. On consequential or irreversible ones, keep a human deciding."
+        },
+        {
+          "q": "How do I decide fast with AI without being reckless?",
+          "a": "Sort by whether the decision can be undone. Reversible and low-stakes calls should move fast, and leaning on the tool is right. Irreversible ones earn a pause, because a fast confident answer is most dangerous exactly when it feels the same as all the easy ones. Match your pace to the stakes, not the interface."
+        },
+        {
+          "q": "How do I keep my own opinion alive when the tool is usually right?",
+          "a": "Keep forming a view before you consult it, even when the model is reliable, so you are comparing rather than echoing. Being right often does not make the tool right always, and the day it is confidently wrong, your practiced judgment is what is left. Outsource your view entirely and you have nothing to check it with."
         }
-      ],
-      "id": "putting-it-into-practice"
+      ]
     },
     {
-      "category": "Comparisons and buying",
+      "category": "Catching AI bias and errors",
+      "id": "catching-bias-and-errors",
       "items": [
         {
-          "q": "How is this different from other books about AI?",
-          "a": "Most AI books explain the technology. This one is about the leader using it, the psychology and ethics of judgment when a machine is in the room."
+          "q": "How do I know if our AI tool is biased?",
+          "a": "Look past the average to the distribution. A system that works well overall can fail systematically for a smaller group, usually the people underrepresented in its data, while the headline accuracy looks fine. Ask where it fails and who is standing there when it does, and run the audit even when you would rather not."
         },
         {
-          "q": "Is The AI Leader's Mind a self-help or a business book?",
-          "a": "Both, in a sense. It is a leadership book grounded in behavioral science, as concerned with your inner habits as with the calls you make at work."
+          "q": "How do I catch errors in AI output before they cause harm?",
+          "a": "Keep a human check between the output and the consequence, especially where the consequence falls on a person. Form your own rough expectation first so a wrong answer has something to clash with, and stay a little skeptical of your most reliable tool, since that is where inattention hides."
         },
         {
-          "q": "Will this book still be relevant as AI changes?",
-          "a": "Yes. It deliberately avoids specific tools and focuses on the durable human skills, so it stays useful as the technology keeps shifting."
+          "q": "Can AI be biased even if it seems objective?",
+          "a": "Yes, and the appearance of objectivity is part of the danger. A model learns from data that records human choices, so it can hand back bias with the fingerprints wiped off, harder to see because it arrives as math. Reaching for the tool to feel neutral often just hides where the values came from."
         },
         {
-          "q": "Does the book take a pro-AI or anti-AI stance?",
-          "a": "Neither. It treats AI as a powerful tool to be used with judgment, warning against both blind adoption and reflexive rejection."
+          "q": "How does AI make my own biases worse?",
+          "a": "It amplifies them. A capable model can build a fluent case for almost any position, so it hands you a well-argued version of what you already believed, and precise outputs make a guessed number feel authoritative. The biases were yours first. The tool pours fuel on them."
         },
         {
-          "q": "Is this book only theory, or is it practical?",
-          "a": "Practical throughout. Every framework is tested against real decisions and paired with steps you can use on a Monday."
+          "q": "What is anchoring and how does AI trigger it?",
+          "a": "Anchoring is the pull of the first number named, which quietly becomes the reference everyone argues around. When a model estimates the figure, that estimate sets the frame, and its precision makes it pull harder. Protect the call by forming your own rough number before you open the tool, then compare."
         },
         {
-          "q": "What makes the author qualified to write it?",
-          "a": "Twenty years working where technology meets human behavior, and a habit of researching a subject deeply before writing the book he wished he had found sooner."
+          "q": "The AI keeps agreeing with me. Is that a problem?",
+          "a": "It is a warning. A model that only ever agrees is a mirror, not a check, and comfort is not evidence. Use it against yourself: ask it to make the strongest case for the opposite of what you want, or what would have to be true for your plan to fail."
         },
         {
-          "q": "Can I read it if I do not lead a team yet?",
-          "a": "Yes. The habits of judgment, trust, and resilience apply to anyone who works with AI, and they prepare you well for leading later."
+          "q": "How do I use AI to check my thinking instead of confirm it?",
+          "a": "Aim it at your own idea, not in support of it. Ask for the strongest case against your plan, run a pre-mortem where you imagine it failed and ask why, and sit with the answers instead of swatting them away. The one use where a tool that can argue anything is a gift is arguing against you."
         },
         {
-          "q": "Where can I buy The AI Leader's Mind?",
-          "a": "On Amazon, in Kindle and paperback editions. The links are on this site's book page."
+          "q": "Why does a precise AI number feel more trustworthy than it should?",
+          "a": "Because precision reads as authority. A figure with decimals looks earned even when it came from shaky inputs, and a machine produces precise numbers without the discomfort a person would feel doing the same. Look past the digits to what produced them; a precise guess is still a guess."
+        },
+        {
+          "q": "How do I stop a dashboard from hiding what matters?",
+          "a": "Ask, every week, what matters here that nothing is measuring. Dashboards show the countable and quietly make it feel like the whole picture, so morale, trust, and the person about to quit drop out because no chart points at them. The most important signal is often the one nothing is tracking."
+        },
+        {
+          "q": "Who does an AI model get wrong, and how do I find out?",
+          "a": "Usually the people least represented in its data and least able to make the failure visible, which is why someone with power has to ask on their behalf. Find out by looking at outcomes for those groups, not just the overall rate, and by asking whose reality shaped the data in the first place."
         }
-      ],
-      "id": "comparisons-and-buying"
+      ]
+    },
+    {
+      "category": "Staying human: empathy and connection",
+      "id": "staying-human",
+      "items": [
+        {
+          "q": "How do I stay connected to my team when AI handles communication?",
+          "a": "Let the tool carry the logistics and spend the freed time on presence. Use it to notice who might need a word, then show up yourself for the moments that decide whether a person feels seen. A message a person meant lands differently from one a machine generated, and people can tell."
+        },
+        {
+          "q": "Can AI replace the human side of leadership?",
+          "a": "No. It can detect the pattern of an emotion and draft a fitting reply, but it does not feel anything, and on a hard day people know the difference between being processed and being met. As more routine work moves through machines, the human ability to connect and give meaning becomes the scarce, deciding skill."
+        },
+        {
+          "q": "Does using AI make leaders less empathetic?",
+          "a": "It can, if they let the tool carry the emotional load: the note, the check-in, the difficult message. That is efficient and hollow. Use the machine for reach and routine, and keep the moments that matter human, especially under deadline, which is exactly when the temptation to automate them is strongest."
+        },
+        {
+          "q": "How do I deliver bad news in an age of automation?",
+          "a": "In person, in your own voice. The tool can help you prepare, and it should never be the thing that tells someone their livelihood or hope just changed. What the person needs is a human being who is accountable and present, which is the whole point of the moment and the part a machine cannot supply."
+        },
+        {
+          "q": "What should I never automate as a leader?",
+          "a": "The moments that carry real human weight: the hard conversation, the genuine thanks, the apology, the one-on-one where trust is built. Their value is that they are actually yours. Automate them and you keep the words while losing the thing they were for, and you spend trust you cannot easily earn back."
+        },
+        {
+          "q": "How do I protect real connection at work as tools take over?",
+          "a": "Keep the high-stakes emotional moments off the machine and treat human attention as the thing to protect, not the thing to optimize away. Connection is a skill that fades without use, so practice it on purpose: have the conversations that could have been messages, and be present for what a tool could have handled."
+        },
+        {
+          "q": "Is emotional intelligence still worth developing if AI can read sentiment?",
+          "a": "More than ever. A sentiment score captures the surface. A calm, polite message can hide someone at the end of their patience. As machines take the measurable work, the human ability to read what the score misses and respond as a person becomes the decisive skill, not an optional one."
+        },
+        {
+          "q": "How do I keep one-on-ones meaningful when tools can run them?",
+          "a": "Prepare however you like, but in the room, be in the room, not managing a script. The entire value of a one-on-one is attention, the sense that this person and their work warrant your real presence. Conduct it from a tool and you send the opposite message, and people feel it immediately."
+        },
+        {
+          "q": "How do I give people meaning when a machine assigns the work?",
+          "a": "Supply the why the tool cannot. People give their best when they understand how the work connects to something they care about, and someone they trust helped them see it. As the machine takes over the what and the how, the manager as meaning-maker becomes one of the most important parts of the job."
+        },
+        {
+          "q": "What does the data miss about my people?",
+          "a": "Everything outside its frame: the strong performer whose home life is falling apart, the team one resignation from collapse, the customer whose neutral score hides real distress. The model sees the trace, not the life. A leader's job is to keep asking about the people the data cannot see."
+        }
+      ]
+    },
+    {
+      "category": "Trusting tools, vendors, and accountability",
+      "id": "trusting-tools-and-vendors",
+      "items": [
+        {
+          "q": "Our AI vendor will not explain how the model works. Should we trust it?",
+          "a": "Trust it less, and calibrate carefully. You cannot finely trust a box you cannot see into, because when it is right you do not know why, so you cannot predict when it will be wrong. Push for visibility into what it optimizes and where it fails, and keep a human owning the decisions it shapes."
+        },
+        {
+          "q": "How do I decide whether to trust a new AI tool?",
+          "a": "Start from what it was built to do well and where it is known to be weak, then earn trust task by task from its real track record. A tool is not neutral infrastructure; it is a set of someone else's choices about what to optimize and what good enough means. Know whose judgment you are relying on."
+        },
+        {
+          "q": "How do I rebuild trust after an AI tool failed us?",
+          "a": "Recalibrate, do not exile or forget. A failure draws the boundary of what the tool can handle, which is worth more than a hundred smooth successes. Trust it a little less on the kind of call that broke it, keep using it where it stays strong, and watch the edge you just learned about."
+        },
+        {
+          "q": "How do I build my team's trust in an AI tool?",
+          "a": "Teach them what it is for and where it fails, and make it safe, even rewarded, to raise doubts. The goal is judgment around the tool, not blind use of it. The most dangerous team is not the one that distrusts the machine but the one that has learned to stay quiet when it is wrong."
+        },
+        {
+          "q": "What makes an AI tool trustworthy?",
+          "a": "A reliable, honest track record on specific tasks, transparency about how it reaches an answer, and clear limits. Trust in a tool is narrow and earned piece by piece, unlike trust in a person, which is broad and built on character. A tool can be excellent at one thing and unreliable at another."
+        },
+        {
+          "q": "How is trusting AI different from trusting a person?",
+          "a": "A person earns trust broadly, through character over time. A tool earns it narrowly, task by task, and can be excellent at one thing and poor at the next. That is why a single verdict on a tool is almost always wrong, and why trust in it has to stay local and kept up to date."
+        },
+        {
+          "q": "What breaks trust between a leader and their team around AI?",
+          "a": "Using the tool to replace judgment people were proud of, or punishing those who question it. Trust breaks when people feel managed by a machine instead of led by a person. It is rebuilt by keeping yourself visibly in the decisions and making it safe to say the model looks wrong."
+        },
+        {
+          "q": "How do I make it safe for people to question the AI?",
+          "a": "React well when they do. When someone challenges the tool and turns out to be right, reward it visibly. When they are wrong, keep it costless, or no one risks it next time. Psychological safety is the condition for catching the errors a confident tool will otherwise hide."
+        },
+        {
+          "q": "Should I trust a tool more because it sounds confident?",
+          "a": "No. Confidence is a machine's default register, not something it earns on a given answer, so tone carries no information and can reassure you most when you should be most careful. Base trust on the track record, not the delivery: how often it has been right about this kind of thing, not how sure it sounds."
+        },
+        {
+          "q": "How do I keep accountability clear when a tool makes decisions?",
+          "a": "Refuse the hiding place. The moment the justification becomes the model said so, responsibility has evaporated. Insist a specific person owns each consequential decision in their own name, as if the tool had only advised. The machine can inform the call; it cannot absorb the responsibility for it."
+        }
+      ]
+    },
+    {
+      "category": "Staying steady as AI changes everything",
+      "id": "staying-steady",
+      "items": [
+        {
+          "q": "How do I stay steady when AI systems fail?",
+          "a": "Lean on the judgment you kept in practice and the preparation you did in advance. Resilience is built in the calm and spent in the storm, so the leader who never fully outsourced their judgment is the one who can still function when the dashboard goes dark. Steadiness is also a leadership act. A team borrows its composure from you."
+        },
+        {
+          "q": "How do I lead when everything about AI keeps changing?",
+          "a": "Aim your energy at what you control and let the rest go. You do not control the pace of the technology; you do control which tools you learn, how carefully you check them, the judgment you bring, and how you treat people. That focus is not resignation, it is the most practical thing you can do."
+        },
+        {
+          "q": "How do I stop worrying about things I cannot control with AI?",
+          "a": "Use the old Stoic split: divide what you control from what you do not, and spend energy only on the first. Worry poured into the pace of the technology or the fate of your industry drowns you and changes nothing. The same energy on your learning, your checks, and your people actually moves something."
+        },
+        {
+          "q": "How do I keep my team resilient through constant AI change?",
+          "a": "Give them stable ground: a clear sense of what stays theirs, honest information instead of silence to fill with fear, and practice making calls so their confidence does not depend on the tools. A team that stays standing keeps thinking and deciding well while others freeze."
+        },
+        {
+          "q": "What mindset helps leaders adapt to AI?",
+          "a": "Hold your expertise lightly enough to update it, treat tools as temporary, and value the ability to keep learning over mastery of any one system. An identity fused to a single skill shatters when the world moves. One held lightly can adapt as the ground shifts."
+        },
+        {
+          "q": "How do I prepare for the day the AI tools fail?",
+          "a": "Rehearse the outage before it happens. Picture the systems gone and ask what you could still do. The gaps you find are your homework. Keep some skills warm with unaided reps, so a failure is a drill you have practiced rather than a crisis you meet helpless, with everyone watching."
+        },
+        {
+          "q": "How do I stay calm when I feel behind on AI?",
+          "a": "Step back and take the longer view. People have met the printing press, the factory, and the computer, each time sure the ground was ending, each time finding a way to lead through. The panic shrinks from a little distance, which frees you to take the next practical step instead of freezing."
+        },
+        {
+          "q": "What is the most important habit for leading well with AI?",
+          "a": "Decide before you look. Forming your own view before the model speaks keeps you in the loop and keeps your judgment in training, and it is the single practice that rebuilds the thinking most workflows quietly erode. Small, repeated, and it compounds."
+        },
+        {
+          "q": "How do I keep growing instead of coasting on AI?",
+          "a": "Keep choosing the discomfort of being a beginner. Seek the things you are not yet good at, do some work the harder way on purpose, and treat curiosity as a discipline rather than a mood. A capable tool makes coasting easy, so growth has to be chosen, again and again."
+        },
+        {
+          "q": "What is the one thing to remember about leading with AI?",
+          "a": "Every AI-shaped decision is a small vote for the leader you are becoming. Defer without checking and you train a self that defers. Pause, form a view, and own the call, and you train one that stays in the loop. The technology will keep changing. Who you become while using it is the whole point."
+        }
+      ]
     }
   ],
   "all": [
     {
-      "q": "What is The AI Leader's Mind about?",
-      "a": "It is about the human side of leading in an AI-driven world. Not the technology, but the person using it, and the inner work that decides whether AI makes a leader sharper or slowly replaceable. It covers judgment, trust, empathy, resilience, and ethics when a machine is in the room.",
-      "category": "About the book"
+      "q": "Will AI replace managers and leaders?",
+      "a": "Not the human core of the job. AI can analyze, draft, and recommend, but it cannot own a decision, hold a team's trust, or give people a reason to care. The evidence points the same way: as routine work moves to machines, judgment, responsibility, and relationships become more valuable, not less. Your role shifts toward those, not away from them.",
+      "category": "Your job and career"
     },
     {
-      "q": "Who wrote The AI Leader's Mind?",
-      "a": "Gaurav Srivastava, who has spent twenty years in technology and consulting, working where technology meets human behavior. He wrote it after watching capable leaders make sharp technical calls that quietly hollowed out the people around them.",
-      "category": "About the book"
+      "q": "My team is scared AI will take their jobs. What do I say?",
+      "a": "Start with the fear, not a reassuring slide. People rarely believe that nothing will change while they watch the tool do part of their work. What lands is honesty plus a path: name what the machine will take, then show the part of their role that grows in value, and help them move toward it. A fear with a concrete next step stops being paralyzing.",
+      "category": "Your job and career"
     },
     {
-      "q": "Is The AI Leader's Mind a technical or coding book?",
-      "a": "No. There is no code and no jargon. It is a leadership book that draws on how AI actually behaves, but its subject is human judgment, trust, and ethics, the parts of leading a model cannot do for you.",
-      "category": "About the book"
+      "q": "What jobs and skills are safest as AI spreads?",
+      "a": "The durable ones are not tasks a model can copy but capacities it cannot: judgment under uncertainty, owning a decision, building trust, and reading what the data misses. The ability to keep learning is a meta-skill that outlasts any single tool. Tie your value to those, not to one skill the next model might absorb.",
+      "category": "Your job and career"
     },
     {
-      "q": "What formats is the book available in?",
-      "a": "A Kindle edition and a paperback, both on Amazon. The Kindle edition runs 258 pages and the paperback runs 243 pages.",
-      "category": "About the book"
+      "q": "Should I worry about my career if AI can do most of my job?",
+      "a": "Worry is reasonable; despair is not. The move is to redraw your value around what the machine cannot do. Much of what felt core to your work was mechanics the tool now handles. What remains, judgment, responsibility, and the trust you hold with people, is the harder and more human part, and it is where a career becomes more secure, not less.",
+      "category": "Your job and career"
     },
     {
-      "q": "How long is The AI Leader's Mind?",
-      "a": "The paperback is 243 pages across twelve chapters and a set of appendices, which include case studies, a single decision tool, further reading, and full sources.",
-      "category": "About the book"
+      "q": "How do I help an expert whose skill AI now imitates?",
+      "a": "Do not defend the old skill. Help them move their value. The specific task may be automatable, but the judgment and experience underneath it usually are not, and they matter more now because they tell you when the machine is wrong. Frame it as a promotion, from doing the work to knowing when the work is right.",
+      "category": "Your job and career"
     },
     {
-      "q": "What will I learn from the book?",
-      "a": "How to spot the biases AI amplifies, build calibrated trust, lead people through fear of change, stay resilient when systems fail, make hard ethical calls with one repeatable framework, and run a daily habit that keeps your judgment growing.",
-      "category": "About the book"
+      "q": "Is it true AI helps junior people more than seniors?",
+      "a": "Research on generative assistants at work found the largest gains for the least experienced, in one study a 34 percent lift for newer workers against 14 percent on average. That is encouraging and a warning: tools level up beginners fast, which raises the value of the seasoned judgment that catches a confident output when it is wrong.",
+      "category": "Your job and career"
     },
     {
-      "q": "Is the book backed by research?",
-      "a": "Yes. It draws on neuroscience, cognitive and behavioral science, and the research on trust and habit, each source named and cited. Its frameworks are tested against real decisions like hiring, lending, fraud, and crisis.",
-      "category": "About the book"
+      "q": "How many people actually use AI at work now?",
+      "a": "Adoption is already broad. Roughly half of US adults use AI chatbots, and workplace use climbs every month. The practical point is that this is not a future to prepare for but a present to lead in, which is why the focus belongs on the human skills you need now rather than on the technology itself.",
+      "category": "Your job and career"
     },
     {
-      "q": "Why should a leader read this now?",
-      "a": "Because AI is arriving faster than the wisdom to lead with it. Roughly half of US adults already use AI chatbots, and the tools reshape decisions every month. The book is about keeping your judgment and humanity as that happens.",
-      "category": "About the book"
+      "q": "Will AI make leadership easier or harder?",
+      "a": "Both. It removes drudgery and adds reach, and it raises the stakes on judgment, trust, and ethics, because a confident tool can scale a mistake fast. The technical part gets easier and the human part gets harder and more important, which is exactly the part that was always the real job.",
+      "category": "Your job and career"
     },
     {
-      "q": "Who is The AI Leader's Mind for?",
-      "a": "CEOs, executives, managers, team leaders, and founders navigating AI, and anyone who would rather AI made them more capable than more replaceable.",
-      "category": "Who it is for"
+      "q": "Do I need to become technical to lead with AI?",
+      "a": "No. You need to understand how the tools behave, where they fail, and how they shape your thinking, not how to build them. The scarce skill is not coding; it is the judgment to use a capable, fallible tool well and to keep your people capable alongside it.",
+      "category": "Your job and career"
     },
     {
-      "q": "Is this book useful for new or first-time managers?",
-      "a": "Yes. It gives a first-time manager a clear way to use AI without deferring to it blindly, and the habits to build judgment early rather than outsource it before it forms.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Is it relevant for senior executives and CEOs?",
-      "a": "Very. The hardest AI decisions in hiring, lending, layoffs, and crisis land at the top, and the book gives senior leaders a way to own those calls rather than hide behind the model.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Do I need an AI or technical background to read it?",
-      "a": "No. It assumes no technical knowledge. If you use or oversee AI tools at work, that is enough.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Is the book only for people in tech companies?",
-      "a": "No. It uses examples from healthcare, finance, hiring, education, and crisis response. Any leader whose decisions are shaped by AI will find it relevant.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Can individual contributors benefit, not just managers?",
-      "a": "Yes. Anyone who makes judgment calls with AI can use the habits for keeping their thinking sharp and their skills from fading.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Is it useful for HR and people leaders?",
-      "a": "Yes. It deals directly with fear of change, resistance, trust, and the ethics of automated decisions about people, which sit at the center of HR work.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Would this help someone worried about AI taking their job?",
-      "a": "Yes. A central chapter is about redrawing your value around what a machine cannot do, so you become harder to replace rather than easier.",
-      "category": "Who it is for"
-    },
-    {
-      "q": "Will AI replace leaders and managers?",
-      "a": "Not the human core of the job. AI can analyze, draft, and recommend, but it cannot own a decision, hold trust, or give people meaning. The book argues those grow more valuable, not less.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "What can AI not do that human leaders can?",
-      "a": "Take responsibility for a call, read what is not in the data, hold trust with real people, decide what is worth optimizing for, and stay present in the moments that matter.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "How is AI changing the way leaders think?",
-      "a": "It shifts leaders from doing the analysis to judging the machine's analysis; that sounds small, but it changes where attention, doubt, and skill have to live.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "What are the three phases of AI in leadership?",
-      "a": "Assisted, where AI speeds up tasks you already do. Augmented, where it shapes the options you see. And symbiotic, where the work is genuinely shared. Most leaders are further along than they think.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "Is AI leadership just hype?",
-      "a": "The tools are real and already changing decisions. The book cuts the hype by focusing not on the technology but on the durable human skills that decide whether it helps or harms.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "What is human-AI collaboration in leadership?",
-      "a": "It is working with a machine as a capable but limited partner, using its speed and reach while keeping the judgment, responsibility, and care that only a person brings.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "Does using AI make leaders better or worse?",
-      "a": "Either, depending on how it is used. Used well it sharpens judgment; used lazily it erodes the skill it was meant to support. The book is about staying on the right side of that line.",
-      "category": "AI and the future of leadership"
-    },
-    {
-      "q": "What is the biggest risk AI poses to leaders?",
-      "a": "Quiet deskilling. Leaning on AI for every call can thin the judgment the job depends on, the same way constant GPS use weakens your sense of direction.",
-      "category": "AI and the future of leadership"
+      "q": "What is the biggest risk AI poses to a leader?",
+      "a": "Quiet deskilling. Leaning on AI for every call can thin the judgment the job depends on, the way heavy reliance on turn-by-turn navigation is linked to weaker memory for finding your own way. You feel more productive while becoming less capable, and the two trends hide each other until the day the tool fails.",
+      "category": "Your job and career"
     },
     {
       "q": "How do I stay relevant as a leader as AI keeps advancing?",
-      "a": "Move your value to what machines cannot do, keep your judgment in active use, and build the meta-skill of learning fast as the tools keep changing.",
-      "category": "AI and the future of leadership"
+      "a": "Move your value to what machines cannot do, keep your judgment in active use instead of outsourcing it, and get good at learning the next tool fast. Adaptability is the meta-skill that compounds while specific skills age out. Relevance comes from staying the person who decides well and keeps people capable, not from mastering any one system.",
+      "category": "Your job and career"
     },
     {
-      "q": "What does the future of leadership look like with AI?",
-      "a": "More capability and more temptation to coast. The book's closing vision is leaders who use AI to become more human in their work, and who treat every AI-shaped decision as practice.",
-      "category": "AI and the future of leadership"
+      "q": "How do I get my team to actually use the new AI tools?",
+      "a": "Adoption follows safety, not pressure. Find the fear under the resistance, name it, and give people a concrete role on the other side. Let them be beginners without an audience, reward the ones who question the tool, and show a believable picture of the work after the change. People move toward a future they can see themselves in.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "How should leaders make decisions with AI?",
-      "a": "Form your own view first, then compare it with the model's, and treat the gap as the place where real thinking happens. The person, not the machine, owns the final call.",
-      "category": "Making decisions with AI"
+      "q": "Why do rational arguments about AI fail to convince people?",
+      "a": "Because resistance is usually a feeling, and feelings do not yield to spreadsheets. A sharper productivity slide often deepens resistance by signaling you care about the number, not the person. The psychology of change is clear that people adopt once they feel understood. Name the fear, let them feel heard, and only then does the evidence land.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "When should I trust an AI recommendation?",
-      "a": "When the model has a track record on that specific kind of task and your own reasoning agrees. Trust it less where it has been wrong, or where the stakes are human and hard to measure.",
-      "category": "Making decisions with AI"
+      "q": "My best person refuses to touch the tool. What do I do?",
+      "a": "Get curious before you push. Stubbornness is usually a fear in disguise, and which fear differs by person: replacement, looking incompetent, or losing control. Ask, and actually listen. You cannot argue someone out of a fear you have not named, and the refusal is rarely about the tool itself.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "How do I know when to override the AI?",
-      "a": "When your independent read conflicts with the model and you can name why. Hesitation is often pattern recognition running ahead of your words, worth a sentence out loud before you decide.",
-      "category": "Making decisions with AI"
+      "q": "How do I roll out AI without wrecking morale?",
+      "a": "Lead the human transition, not just the technical one. Be honest about what is changing, protect people's dignity and sense of value, and make it safe to raise doubts. Morale breaks when people feel managed by a machine rather than led by a person, so keep yourself visibly in the loop and on their side.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "What is a good decision-making framework for AI?",
-      "a": "The book's model moves through five layers: the machine's input, your own read, the gap between them, a human check on who is affected, and a final call owned by a person.",
-      "category": "Making decisions with AI"
+      "q": "My team is exhausted by change. How do I add one more tool?",
+      "a": "Respect the fatigue as real information, not resistance to crush. People who have been through too many passing initiatives are right to conserve energy. Be clear about what is genuinely different this time and why it will stick, do not dress up a small tool as a revolution, and give them a reason to spend the energy.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "How do I avoid rubber-stamping AI outputs?",
-      "a": "Decide before you look. If you cannot say what you thought before the model told you, you were not deciding, you were deferring.",
-      "category": "Making decisions with AI"
+      "q": "How do I handle someone who loves the tool but ignores its flaws?",
+      "a": "Pair their enthusiasm with someone else's skepticism. Early adopters spread both the value and the failure modes fast, because they are looking for wins, not weaknesses. Value their energy, and make questioning the tool a normal, rewarded thing so the flaws get caught before they scale.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "What if the AI is confident but I am unsure?",
-      "a": "Say what the model recommends, then say what gives you pause, and let both sit for a moment. Certainty on a screen is not the same as being right.",
-      "category": "Making decisions with AI"
+      "q": "What is the right first step when introducing AI to a team?",
+      "a": "Make it safe to be a beginner. Before the training or the targets, remove the fear of looking foolish: share your own fumbling, take away the audience for early attempts, and signal that questions are welcome. Competent people fear incompetence most, and a safe start dissolves resistance that pressure would harden.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "How can AI improve decision quality?",
-      "a": "By widening the options you consider and catching patterns you would miss, as long as you use it to sharpen your judgment rather than replace it.",
-      "category": "Making decisions with AI"
+      "q": "How do I lead an AI change when I am uneasy about it myself?",
+      "a": "Honestly. You do not have to be fearless, only a step ahead. Faked confidence is thin and people feel through it. Naming your own uncertainty while still moving is more credible and more calming than pretended calm, and it makes the team's fear normal enough to work through.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "What is calibrated trust in AI?",
-      "a": "Relying on a tool exactly as much as it has earned, task by task, rather than trusting or doubting it across the board. It is a dial, not a switch.",
-      "category": "Making decisions with AI"
+      "q": "Should I force adoption or let it happen gradually?",
+      "a": "Neither extreme works. Forcing breeds quiet sabotage. Drifting leaves the tool unused. Set a clear direction, make the case by addressing fears first, and let people work through their doubts. A slow yes that holds under pressure is worth far more than a fast one that collapses at the first friction.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "How do I keep my judgment sharp while using AI?",
-      "a": "Make some calls without the model, do the estimate before you check it, and treat judgment like fitness, something that fades without use.",
-      "category": "Making decisions with AI"
+      "q": "How do I tell if my team's resistance is fear or a real warning?",
+      "a": "Ask, and take the answer seriously. Sometimes resistance is fear you can help with; sometimes the person refusing the tool is the first to sense a real flaw. A leader who treats all pushback as an obstacle wins the argument and loses the early warning. Get curious before you override.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "Should leaders let AI make the final decision?",
-      "a": "Not on decisions that carry weight for people. The machine can advise, but a person has to own the call in their own name, or accountability disappears.",
-      "category": "Making decisions with AI"
+      "q": "How do I explain to my team why we are adopting AI at all?",
+      "a": "Give them a story they can locate themselves in, not just facts. People fill a narrative gap with fear, usually the version where they are unnecessary. An honest account of where the team is heading and how each person fits turns a threatening change into a shared direction.",
+      "category": "Getting your team on board"
     },
     {
-      "q": "What cognitive biases affect human-AI teams?",
-      "a": "Four stand out: automation bias, confirmation bias, anchoring, and availability bias. Each is normal, and each is amplified when a confident machine is involved.",
-      "category": "Cognitive bias and AI"
+      "q": "My team just accepts whatever the AI says. How do I fix that?",
+      "a": "Bring back friction on purpose. Have people form their own view before the tool speaks, so they have something to compare against, and treat an unquestioned output as a warning sign rather than a success. Reward the person who challenges the model. A team that has quietly stopped questioning is coasting toward the error it will not see.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "What is automation bias?",
-      "a": "The habit of trusting an automated answer over the evidence in front of you. It is why people follow a navigation system into a field, and why leaders wave through a model they should have checked.",
-      "category": "Cognitive bias and AI"
+      "q": "How do I stop myself from over-trusting a confident AI answer?",
+      "a": "Notice the relief. When accepting an answer feels like a weight lifting, treat that as a flag, not a green light, because relief shows up most on the decisions that mattered most. Before you accept a call that counts, say what you would have decided on your own, then compare.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "How does AI worsen confirmation bias?",
-      "a": "A capable model can generate fluent support for almost any position, so it hands you a well-argued version of what you already believed. It becomes a mirror, not a check.",
-      "category": "Cognitive bias and AI"
+      "q": "How much should I trust an AI recommendation?",
+      "a": "Exactly as much as it has earned on that kind of task, no more. Trust is a dial, not a switch. A model can be excellent at forecasting demand and poor at judging a person, so trusting it evenly across both is not fairness, it is laziness. Keep an honest track record and move the dial as evidence comes in.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "What is anchoring bias with AI?",
-      "a": "When a model names a number first, that figure quietly becomes the reference everyone argues around. Precise outputs feel authoritative even when they were guesses.",
-      "category": "Cognitive bias and AI"
+      "q": "What is automation bias and how do I avoid it?",
+      "a": "Automation bias is the habit of trusting an automated answer over the evidence in front of you. It is why people follow a navigation system into a field. The counter-move is small: before accepting a recommendation that matters, state what you would have decided on your own, then compare. If you cannot say what you thought first, you were deferring, not deciding.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "What is availability bias in an AI context?",
-      "a": "Treating what the dashboard shows as all that matters. The countable crowds out the things no metric captures, like morale or trust.",
-      "category": "Cognitive bias and AI"
+      "q": "The tool has been reliable for months. Can I stop checking it?",
+      "a": "That is exactly when the risk grows. A good track record breeds inattention, so the one time the tool is badly wrong is often the one time no one is looking. This is automation complacency. Keep some scrutiny alive on your most reliable systems, spot-checking the outputs you would otherwise wave through.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "How do I reduce automation bias?",
-      "a": "Before accepting a recommendation that matters, state what you would have decided on your own, then compare. That comparison is the safeguard.",
-      "category": "Cognitive bias and AI"
+      "q": "How do I keep people reviewing AI output instead of rubber-stamping it?",
+      "a": "Make review mean something. If a person would approve anything the tool produced, they are not reviewing, they are signing. Ask them what the output would have to say for them to reject it. If they cannot answer, the review was theater, and it is worth catching before the habit fails on the day the output is wrong.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "How can I use AI to fight my own bias?",
-      "a": "Ask it to argue the opposite of what you want, or to name what would have to be true for your plan to fail. A tool that only agrees is an echo.",
-      "category": "Cognitive bias and AI"
+      "q": "How do I tell real analysis from an answer that just sounds confident?",
+      "a": "Judge the substance, not the delivery. A model is fluent whether it is right or wrong, so confidence carries no information. Ask what the claim rests on, what would make it false, and what the tool cannot see. The most dangerous answers are the ones that sound too polished to question.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "Do cognitive biases compound with AI?",
-      "a": "Yes. A model names a number, you anchor, it fits your hope so confirmation waves it through, it hits the dashboard so it feels important, and no one asks where it came from.",
-      "category": "Cognitive bias and AI"
+      "q": "Is it possible to trust AI too much?",
+      "a": "Yes, and it is the more common failure. Over-trust looks like relief and feels like efficiency, right up until the day the model is confidently wrong. Doubt is effortful and deferring is a rest, which is why the seduction is strongest on exactly the hard decisions where your judgment mattered most.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "Which bias am I most likely to fall for?",
-      "a": "The book includes a short self-check for this, because the bias you cannot see in yourself is the one that costs you. Awareness in the moment is the whole skill.",
-      "category": "Cognitive bias and AI"
+      "q": "How do I set the right level of trust for a specific tool?",
+      "a": "Keep score, task by task. Ask where this system has been reliable and where it has burned you, trust the strong areas more and the weak ones less, and be ready to update as the evidence changes. The goal is neither blanket faith nor blanket doubt but a trust that has been earned in pieces.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "Can AI itself be biased?",
-      "a": "Yes, and it can scale its bias faster than any person. The leader's job is to catch it before a model spreads it across the organization.",
-      "category": "Cognitive bias and AI"
+      "q": "What is calibrated trust and how do I build it?",
+      "a": "It is relying on a tool exactly as much as it has earned, and it is hard because the brain prefers one setting for everything. Build it by making the ledger explicit: write down where the tool has proven reliable and where it has not, rather than trusting your gut to remember. Calibration is a habit, not a one-time verdict.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "How do you build trust in AI at work?",
-      "a": "By matching reliance to the tool's real record, being honest about where it fails, and making it safe for people to question it. Trust that cannot be questioned is just silence.",
-      "category": "Trust in AI and teams"
+      "q": "How do I stop deferring to the model on hard decisions?",
+      "a": "Decide before you look. Form a rough view and, on calls that matter, write it down before you open the tool, so the model's confident answer cannot quietly become the view you think you always held. Keeping your own opinion alive is what leaves you something to trust on the day the tool is wrong.",
+      "category": "Stopping blind trust in AI"
     },
     {
-      "q": "What is the trust triangle?",
-      "a": "Three trusts that have to stay in balance: trust in the tool, trust in the people who use it, and trust in yourself; over-lean on any one corner and the whole thing tips.",
-      "category": "Trust in AI and teams"
+      "q": "Am I losing my own skills by relying on AI?",
+      "a": "Possibly, and you would not feel it happening. A skill you stop using fades quietly while you feel more productive. The research analogy is navigation: heavy reliance on turn-by-turn directions is linked to weaker memory for finding your own way. Judgment behaves the same, so protect the core skills by using them on purpose.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "How much should I trust AI?",
-      "a": "Exactly as much as it has earned on that task, no more. Blanket faith invites automation bias, and blanket doubt wastes real help.",
-      "category": "Trust in AI and teams"
+      "q": "How do I keep my judgment sharp when AI does most of the thinking?",
+      "a": "Treat judgment like fitness, something that fades without use. Make some calls without the model, do the estimate before you check it against the tool, and keep a little deliberate friction in your workflow. The reps you do when it does not matter are what let you perform when it does.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "How do I build my team's trust in AI tools?",
-      "a": "Teach them what the tool is for and where it fails, and reward people for raising doubts. The goal is judgment around the tool, not blind use of it.",
-      "category": "Trust in AI and teams"
+      "q": "Does using AI make people worse at their jobs over time?",
+      "a": "It can, if it replaces the thinking rather than supporting it. The danger is not the dramatic failure but the quiet erosion of the very skill the job depends on, one convenient shortcut at a time. Used to sharpen judgment it helps. Used to skip judgment it slowly hollows people out.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "What if my team over-relies on AI?",
-      "a": "Bring back friction on purpose. Have people form their own view before the tool speaks, and treat unquestioned outputs as a warning sign, not a success.",
-      "category": "Trust in AI and teams"
+      "q": "How do I keep my team's skills from fading as tools take over?",
+      "a": "Build a culture that rewards growth, not just deference. Make it normal to form a view before consulting the tool, to question outputs, and to solve some problems the slow way. A team left on default settings hands more of its judgment to the machine each month, feeling productive while getting less capable.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "How do I keep trust in my own judgment?",
-      "a": "Keep forming your own opinion alongside the model's, so the two can be compared. Outsource your view entirely and you have nothing left to trust on the day the tool fails.",
-      "category": "Trust in AI and teams"
+      "q": "What is AI deskilling and why should I care?",
+      "a": "Deskilling is the slow loss of a capability you stop using because a machine does it for you. You should care because it is invisible while it happens and only shows up when you need the skill and it is gone, or when the tool fails and no one can function without it.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "Can you trust AI too much?",
-      "a": "Yes, and it is the more common failure; over-trust looks like relief and feels like efficiency, right up until the day the model is confidently wrong.",
-      "category": "Trust in AI and teams"
+      "q": "How much should I do without AI to stay capable?",
+      "a": "Enough to keep the muscle alive, not so much that you waste the tool. A regular rhythm of unaided calls, estimates, and problems solved the hard way keeps your judgment in practice. It is training, not nostalgia: the point is to be ready for the moment the tool is wrong or gone.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "How is trusting AI different from trusting people?",
-      "a": "A person earns trust broadly through character. A tool earns it narrowly, task by task, and can be excellent at one thing and unreliable at another.",
-      "category": "Trust in AI and teams"
+      "q": "How do I balance AI efficiency with keeping my skills?",
+      "a": "Take the efficiency, then reinvest part of it in deliberate practice. Let the tool save the time, and spend some of that time keeping your own judgment sharp. The trap is spending all of it on more volume, which leaves you faster and quietly less capable.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "What breaks trust between a leader and their team around AI?",
-      "a": "Using the tool to replace judgment people were proud of, or punishing those who question it. Trust breaks when people feel managed by a machine instead of led by a person.",
-      "category": "Trust in AI and teams"
+      "q": "Will my team still function if the AI systems go down?",
+      "a": "Only if you have practiced for it. Run the occasional decision as if the tools were unavailable, so an outage is a drill you have rehearsed rather than a crisis you meet helpless. The gaps you find in a calm rehearsal are your homework, the skills to keep alive before you need them.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "Does AI reduce the need for emotional intelligence?",
-      "a": "The opposite. As more routine work moves through machines, the human ability to read, connect, and give meaning becomes the scarce and decisive skill.",
-      "category": "Emotional intelligence and empathy"
+      "q": "How do I coach my team to grow, not just defer, with AI?",
+      "a": "Teach them to form a view first, question outputs safely, own their decisions, and keep practicing the skills the tool could otherwise absorb. Give them problems to work through rather than answers to apply, and reward the questioning. Growth beside a capable tool has to be built on purpose, because the default is comfortable dependence.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "What is algorithmic empathy?",
-      "a": "A machine detecting the pattern of an emotion and producing a fitting response. It is useful for reach, but it does not feel anything, and people can tell the difference on a hard day.",
-      "category": "Emotional intelligence and empathy"
+      "q": "What skills should I deliberately protect from automation?",
+      "a": "The ones the job actually depends on: judgment under uncertainty, the ability to decide and own the outcome, reading people and situations, and the sense of what matters that no metric captures. Offload the routine and the mechanical freely, and guard the core judgment as something to keep exercising.",
+      "category": "Keeping skills sharp"
     },
     {
-      "q": "Can AI replace human empathy in leadership?",
-      "a": "No. It can flag who might need attention and draft routine warmth, but the moments that decide whether a person feels seen still need a real human present.",
-      "category": "Emotional intelligence and empathy"
+      "q": "Is it ethical to use AI to screen job candidates?",
+      "a": "It can be, with care. Two risks dominate: the model learned from past hiring and can reproduce its patterns, and it scores what it can measure while ignoring judgment, temperament, and fit. Use it to handle volume, keep the decision human, and ask who it might be filtering out unfairly before you act on its ranking.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "How do I stay emotionally connected to my team while using AI?",
-      "a": "Let the tool handle reach and routine, and spend the time it frees on presence. Use the machine to notice who needs you, then show up yourself.",
-      "category": "Emotional intelligence and empathy"
+      "q": "Is it fair to use AI in hiring decisions?",
+      "a": "Fairness is not something the tool can certify for you. Treating everyone the same can be unfair when people start from different places, and a definition narrow enough for a machine to guarantee is usually too narrow. The test is whether you could defend the outcome, in the open, to the person affected.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "What does AI miss about people?",
-      "a": "Everything outside its data. The performer whose home life is falling apart, the team one resignation from collapse, the customer whose neutral score hides real distress.",
-      "category": "Emotional intelligence and empathy"
+      "q": "Can I use AI to help decide layoffs?",
+      "a": "A model can surface information, and it must never own a decision this heavy or become a place to hide from it. The danger is exactly the relief of it feeling less personal. Keep a named person accountable, have them feel the full weight, and deliver the news face to face with honesty and care.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "How can leaders protect human connection in an automated workplace?",
-      "a": "By keeping the high-stakes emotional moments off the machine, and treating human attention as the thing worth protecting rather than the thing to optimize away.",
-      "category": "Emotional intelligence and empathy"
+      "q": "How do I use AI in performance reviews without dehumanizing people?",
+      "a": "Let the tool assemble the raw material and keep the judgment and delivery human. It sees what was logged, not the context, the growth that has not shown up yet, or the quiet person who held the team together. People can tell being understood from being scored, so bring the context the data missed.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "Does using AI make leaders less empathetic?",
-      "a": "It can, if they let the tool carry the emotional load. The book's counsel is to use it for logistics and keep the human moments human.",
-      "category": "Emotional intelligence and empathy"
+      "q": "Is it ethical to use AI for lending or credit decisions?",
+      "a": "Only with someone accountable for who it refuses. The model can reproduce historical patterns of who was served, its errors fall hardest on people with the least power to contest them, and a high accuracy figure says nothing about who absorbs the wrongful denials. Ask who it refuses, and whether those refusals are fair.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "What is the leader's role in an emotionally intelligent AI culture?",
-      "a": "To model that the tool serves people, not the other way around, and to reward attention and care as much as speed and output.",
-      "category": "Emotional intelligence and empathy"
-    },
-    {
-      "q": "How do I lead my team through AI change?",
-      "a": "Start with the fear underneath the resistance, not the productivity case. People adopt change when they feel understood and safe, not when they are argued into it.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "Why do employees resist AI?",
-      "a": "Usually fear, not stubbornness. Fear of being replaced, of looking incompetent, of losing control, of no longer mattering, or of a future they cannot picture themselves in.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "What are the five fears of AI adoption?",
-      "a": "Replacement, incompetence, loss of control, loss of value, and an unimaginable future. Naming the specific fear is what lets you address it.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "Why do rational arguments about AI fail to persuade?",
-      "a": "Because resistance is a feeling, and feelings do not yield to spreadsheets. A better productivity slide often deepens resistance by signaling you care about the number, not the person.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "How do I reduce fear of AI in my organization?",
-      "a": "Make space for the fear, name it honestly, and show people a concrete role for themselves on the other side of the change.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "What if my team's resistance to AI is actually right?",
-      "a": "Sometimes it is. The person refusing a tool may be the first to sense a real flaw. Get curious before you override, or you lose your early warning.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "How do I help my team feel valued as AI takes over tasks?",
-      "a": "Help each person redraw their value around judgment, relationships, and responsibility, the parts of their work a machine cannot absorb.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "How do I lead people through fear when I am afraid too?",
-      "a": "Honestly. You do not have to be fearless, only a step ahead. Naming your own uncertainty while still moving is more credible than pretended calm.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "What is the leader's job during an AI rollout?",
-      "a": "To manage the human transition, not just the technical one. The tool is the easy part. The fear, trust, and identity around it are the real work.",
-      "category": "Fear, resistance, and change"
-    },
-    {
-      "q": "How do leaders stay resilient when AI systems fail?",
-      "a": "By keeping their own judgment in practice so they can still function when the dashboard goes dark, and by spending energy on what they control rather than what they cannot.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "What is AI deskilling?",
-      "a": "The slow erosion of a skill you stop using because a machine does it for you; convenience feels like progress while capability quietly declines.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "How do I avoid losing my skills to AI?",
-      "a": "Keep the muscle in use on purpose. Make some decisions unaided, keep a little friction in your workflow, and treat judgment like fitness that fades without exercise.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "Does AI make us worse at thinking?",
-      "a": "It can. The research on navigation links heavy reliance on GPS to weaker spatial memory, and the same pattern can reach judgment if every call is outsourced.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "Why does the book use Stoic philosophy?",
-      "a": "Because the Stoic split between what you control and what you do not is a practical tool for a moment of fast, uncontrollable change. It aims your energy where it can actually work.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "How can Stoicism help leaders work with AI?",
-      "a": "It steadies you by separating the technology's pace, which you cannot control, from your own learning, care, and judgment, which you can.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "How do I keep my team resilient during AI change?",
-      "a": "Give them stable ground: a clear sense of what stays theirs, honest information, and practice making calls so their confidence does not depend on the tool.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "What mindset helps leaders adapt to AI?",
-      "a": "Holding your expertise lightly enough to update it, treating tools as temporary, and valuing the ability to keep learning over mastery of any one system.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "How do I balance efficiency from AI with keeping my skills?",
-      "a": "Take the efficiency, but reinvest some of it in deliberate practice. Let the tool save time, then spend part of that time keeping your own judgment sharp.",
-      "category": "Resilience and deskilling"
-    },
-    {
-      "q": "How do leaders make ethical decisions with AI?",
-      "a": "By keeping a person accountable for every high-stakes call and asking a short set of questions before the model gets the last word. Ethics leaves the room the moment a decision belongs to no one.",
-      "category": "Ethics and responsibility"
-    },
-    {
-      "q": "What questions should I ask before letting AI decide?",
-      "a": "Who is affected and cannot push back, what the model optimizes for and ignores, where its data comes from, what happens to the person it gets wrong, and whether you could explain the call to their face.",
-      "category": "Ethics and responsibility"
-    },
-    {
-      "q": "Who is responsible when AI makes a bad decision?",
-      "a": "A person has to be. The book's stance is that the leader who deployed and relied on the tool owns the outcome, not the model.",
-      "category": "Ethics and responsibility"
-    },
-    {
-      "q": "Is it ethical to use AI for hiring decisions?",
-      "a": "It can be, with care. The danger is treating an accuracy score as if it settled the ethics, and forgetting the real people behind the percentage it gets wrong.",
-      "category": "Ethics and responsibility"
-    },
-    {
-      "q": "What are the main ethical traps with AI?",
-      "a": "Hiding behind the machine, treating a number as if it answered the moral question, and moving so fast that the moment to pause never arrives.",
-      "category": "Ethics and responsibility"
+      "q": "Who is responsible when an AI decision harms someone?",
+      "a": "A person has to be. A model cannot be accountable, and a decision that belongs to no one gets no one's care. Name the person the decision stops with before it is made, in their own name, as if the tool had only advised. Ownership pulls the attention the decision deserves.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
       "q": "How do I know if an AI decision is fair?",
-      "a": "Look at who is affected and cannot object, and whether you could explain the decision to them honestly. Discomfort at that thought is a signal worth trusting.",
-      "category": "Ethics and responsibility"
+      "a": "Look at who is affected and cannot push back, and ask whether you could explain the decision to their face and have it land as just. Discomfort at that thought is a signal worth trusting; it is your sense of fairness noticing what the metrics missed.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "What is the smell of trouble in AI ethics?",
-      "a": "A decision no one will put their name to, an explanation that only holds if you do not look closely, or a metric thriving while the people behind it seem worse off.",
-      "category": "Ethics and responsibility"
+      "q": "What should I ask before letting AI decide something important?",
+      "a": "Five questions do most of the work: who is affected and cannot push back, what the model optimizes for and ignores, where its data comes from, what happens to the person it gets wrong, and whether you could explain the call to their face. None need a philosophy degree, only a pause.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "How do I handle AI ethics under time pressure?",
-      "a": "Slow down only where it counts. Most calls do not need it, but the ones touching livelihood, freedom, or dignity deserve the pause a fast system will try to skip.",
-      "category": "Ethics and responsibility"
+      "q": "The AI is 90 percent accurate. Is that good enough to use?",
+      "a": "That depends entirely on the other 10 percent. An accuracy score answers a technical question, not a moral one. Ask who the errors fall on and what they cost, because a system that is accurate overall can concentrate its harm on a small group, and the average hides it.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "Should there always be a human in the loop?",
-      "a": "For decisions that carry real weight for people, yes. Not as a rubber stamp, but as someone who genuinely owns the call and will answer for it.",
-      "category": "Ethics and responsibility"
+      "q": "How do I make sure a human stays accountable for automated decisions?",
+      "a": "Apply one rule: for every consequential decision the tools shape, name the person it stops with, and make sure they know it stops with them. Not a team, not the process, not the vendor. A named owner reviews more carefully and does not hide behind the model, because the weight is explicitly theirs.",
+      "category": "Fair and ethical AI decisions about people"
+    },
+    {
+      "q": "How do I handle an ethical AI decision under time pressure?",
+      "a": "Slow down only where it counts. Most calls do not need it, but the ones touching a person's livelihood, freedom, or dignity deserve the pause a fast system will try to skip. Build a deliberate stop into exactly those decisions, because speed is what removes the moment you would have thought.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
       "q": "How do I build an ethical AI culture on my team?",
-      "a": "Make it safe to raise doubts, insist that decisions have owners, and reward people for asking the uncomfortable question before the model ships an answer.",
-      "category": "Ethics and responsibility"
+      "a": "Make it safe to raise doubts, insist that decisions have named owners, and reward the person who asks the uncomfortable question before the model ships an answer. A checklist gets filled out on autopilot. A culture asks the question that matters in the moment, which is what actually catches harm.",
+      "category": "Fair and ethical AI decisions about people"
     },
     {
-      "q": "How do I start leading well with AI this week?",
-      "a": "Pick one recurring decision, form your own view before you open the tool, and compare. That single habit rebuilds the judgment most workflows quietly erode.",
-      "category": "Putting it into practice"
+      "q": "The AI recommendation contradicts my gut. What should I do?",
+      "a": "Treat the disagreement as information, not a tie to break by deferring. Say what the model recommends and what gives you pause, and look for what each of you is seeing that the other is not. Your hesitation is often pattern recognition running ahead of your words, worth a sentence before you overrule it.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "What is one habit that improves decisions with AI?",
-      "a": "Decide first, then check. Forming an independent read before the model speaks keeps you in the loop and keeps your judgment in training.",
-      "category": "Putting it into practice"
+      "q": "How do I decide when to override the AI?",
+      "a": "When your independent read conflicts with the model and you can name why. The point is not to override to prove you can, which is ego, but to keep your own view alive alongside the tool's so the two can actually be compared. Decide deliberately rather than defaulting to the screen.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "How do I run a meeting where AI shaped the recommendation?",
-      "a": "Surface the model's input, then ask each person for their own read before discussing the gap. Protect the independent views before the anchor sets.",
-      "category": "Putting it into practice"
+      "q": "When should I trust the AI over my own judgment?",
+      "a": "When it has a track record on that specific kind of task and your own reasoning agrees. Trust it less where it has been wrong, or where the stakes are human and hard to measure. Trust is local: it should differ across the day depending on the task, and that variation is accuracy, not indecision.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "How do I coach my team to use AI well?",
-      "a": "Teach them to form a view first, question outputs safely, own their decisions, and keep practicing the skills the tool could otherwise absorb.",
-      "category": "Putting it into practice"
+      "q": "I froze on a decision the AI was confident about. What went wrong?",
+      "a": "Nothing, if you used the moment. The hardest call is when the model is sure and you are not, and going along feels safe while disagreeing feels like arrogance. Buy yourself a sentence: state the recommendation, then state your doubt, and let both sit. Certainty on a screen is not the same as being right.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "What should I do when AI and my gut disagree?",
-      "a": "Treat the disagreement as information. Say both out loud, look for what each is seeing, and decide deliberately rather than defaulting to the screen.",
-      "category": "Putting it into practice"
+      "q": "How do I make good decisions with AI instead of just accepting its answer?",
+      "a": "Form your own view first, then compare it with the model's, and treat the gap between them as where the real thinking happens. The person, not the machine, owns the final call. Skip your own read and you are deferring; skip the gap and you miss the most useful signal in the room.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "How often should I make decisions without AI?",
-      "a": "Often enough to keep the skill alive. The book suggests deliberately unaided calls as practice, the way you would train any capacity you did not want to lose.",
-      "category": "Putting it into practice"
+      "q": "What is a simple framework for deciding with AI?",
+      "a": "Move through five quick layers: the machine's input, your own independent read, the gap between them, a human check on who is affected and what cannot be measured, and a final call owned by a person. On most decisions it takes seconds. The point is to keep a person deciding rather than clicking along.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "What is the single most important idea in the book?",
-      "a": "That every AI-shaped decision is a vote for the leader you are becoming, and that judgment, trust, and care grow or fade based on how you cast it.",
-      "category": "Putting it into practice"
+      "q": "How do I avoid rubber-stamping AI recommendations?",
+      "a": "Decide before you look. If you cannot say what you thought before the model told you, you were not deciding, you were deferring. A written pre-commitment on calls that matter also stops you from convincing yourself, once the answer is on screen, that you thought that all along.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "Does the book include practical tools or just ideas?",
-      "a": "Both. Each chapter ends with concrete steps, and the appendices include case studies and a single decision tool the whole book comes down to.",
-      "category": "Putting it into practice"
+      "q": "How do I run a meeting where the AI already gave an answer?",
+      "a": "Protect the independent views before the anchor sets. Surface the model's input, then ask each person for their own read before you discuss the gap. Otherwise the confident output becomes an authority no one wants to question, and the room agrees with a machine it privately doubts.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "How do I measure something as soft as judgment?",
-      "a": "Not with a dashboard. The book offers signals to watch instead, like whether you can still explain your reasoning without the tool and whether your team feels led by a person.",
-      "category": "Putting it into practice"
+      "q": "Should I let AI make the final call on anything?",
+      "a": "Not on decisions that carry weight for people. The machine can advise; a person has to own the call in their own name, or accountability disappears. On low-stakes, reversible calls, let the tool move fast. On consequential or irreversible ones, keep a human deciding.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "How is this different from other books about AI?",
-      "a": "Most AI books explain the technology. This one is about the leader using it, the psychology and ethics of judgment when a machine is in the room.",
-      "category": "Comparisons and buying"
+      "q": "How do I decide fast with AI without being reckless?",
+      "a": "Sort by whether the decision can be undone. Reversible and low-stakes calls should move fast, and leaning on the tool is right. Irreversible ones earn a pause, because a fast confident answer is most dangerous exactly when it feels the same as all the easy ones. Match your pace to the stakes, not the interface.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "Is The AI Leader's Mind a self-help or a business book?",
-      "a": "Both, in a sense. It is a leadership book grounded in behavioral science, as concerned with your inner habits as with the calls you make at work.",
-      "category": "Comparisons and buying"
+      "q": "How do I keep my own opinion alive when the tool is usually right?",
+      "a": "Keep forming a view before you consult it, even when the model is reliable, so you are comparing rather than echoing. Being right often does not make the tool right always, and the day it is confidently wrong, your practiced judgment is what is left. Outsource your view entirely and you have nothing to check it with.",
+      "category": "AI versus your own judgment"
     },
     {
-      "q": "Will this book still be relevant as AI changes?",
-      "a": "Yes. It deliberately avoids specific tools and focuses on the durable human skills, so it stays useful as the technology keeps shifting.",
-      "category": "Comparisons and buying"
+      "q": "How do I know if our AI tool is biased?",
+      "a": "Look past the average to the distribution. A system that works well overall can fail systematically for a smaller group, usually the people underrepresented in its data, while the headline accuracy looks fine. Ask where it fails and who is standing there when it does, and run the audit even when you would rather not.",
+      "category": "Catching AI bias and errors"
     },
     {
-      "q": "Does the book take a pro-AI or anti-AI stance?",
-      "a": "Neither. It treats AI as a powerful tool to be used with judgment, warning against both blind adoption and reflexive rejection.",
-      "category": "Comparisons and buying"
+      "q": "How do I catch errors in AI output before they cause harm?",
+      "a": "Keep a human check between the output and the consequence, especially where the consequence falls on a person. Form your own rough expectation first so a wrong answer has something to clash with, and stay a little skeptical of your most reliable tool, since that is where inattention hides.",
+      "category": "Catching AI bias and errors"
     },
     {
-      "q": "Is this book only theory, or is it practical?",
-      "a": "Practical throughout. Every framework is tested against real decisions and paired with steps you can use on a Monday.",
-      "category": "Comparisons and buying"
+      "q": "Can AI be biased even if it seems objective?",
+      "a": "Yes, and the appearance of objectivity is part of the danger. A model learns from data that records human choices, so it can hand back bias with the fingerprints wiped off, harder to see because it arrives as math. Reaching for the tool to feel neutral often just hides where the values came from.",
+      "category": "Catching AI bias and errors"
     },
     {
-      "q": "What makes the author qualified to write it?",
-      "a": "Twenty years working where technology meets human behavior, and a habit of researching a subject deeply before writing the book he wished he had found sooner.",
-      "category": "Comparisons and buying"
+      "q": "How does AI make my own biases worse?",
+      "a": "It amplifies them. A capable model can build a fluent case for almost any position, so it hands you a well-argued version of what you already believed, and precise outputs make a guessed number feel authoritative. The biases were yours first. The tool pours fuel on them.",
+      "category": "Catching AI bias and errors"
     },
     {
-      "q": "Can I read it if I do not lead a team yet?",
-      "a": "Yes. The habits of judgment, trust, and resilience apply to anyone who works with AI, and they prepare you well for leading later.",
-      "category": "Comparisons and buying"
+      "q": "What is anchoring and how does AI trigger it?",
+      "a": "Anchoring is the pull of the first number named, which quietly becomes the reference everyone argues around. When a model estimates the figure, that estimate sets the frame, and its precision makes it pull harder. Protect the call by forming your own rough number before you open the tool, then compare.",
+      "category": "Catching AI bias and errors"
     },
     {
-      "q": "Where can I buy The AI Leader's Mind?",
-      "a": "On Amazon, in Kindle and paperback editions. The links are on this site's book page.",
-      "category": "Comparisons and buying"
+      "q": "The AI keeps agreeing with me. Is that a problem?",
+      "a": "It is a warning. A model that only ever agrees is a mirror, not a check, and comfort is not evidence. Use it against yourself: ask it to make the strongest case for the opposite of what you want, or what would have to be true for your plan to fail.",
+      "category": "Catching AI bias and errors"
+    },
+    {
+      "q": "How do I use AI to check my thinking instead of confirm it?",
+      "a": "Aim it at your own idea, not in support of it. Ask for the strongest case against your plan, run a pre-mortem where you imagine it failed and ask why, and sit with the answers instead of swatting them away. The one use where a tool that can argue anything is a gift is arguing against you.",
+      "category": "Catching AI bias and errors"
+    },
+    {
+      "q": "Why does a precise AI number feel more trustworthy than it should?",
+      "a": "Because precision reads as authority. A figure with decimals looks earned even when it came from shaky inputs, and a machine produces precise numbers without the discomfort a person would feel doing the same. Look past the digits to what produced them; a precise guess is still a guess.",
+      "category": "Catching AI bias and errors"
+    },
+    {
+      "q": "How do I stop a dashboard from hiding what matters?",
+      "a": "Ask, every week, what matters here that nothing is measuring. Dashboards show the countable and quietly make it feel like the whole picture, so morale, trust, and the person about to quit drop out because no chart points at them. The most important signal is often the one nothing is tracking.",
+      "category": "Catching AI bias and errors"
+    },
+    {
+      "q": "Who does an AI model get wrong, and how do I find out?",
+      "a": "Usually the people least represented in its data and least able to make the failure visible, which is why someone with power has to ask on their behalf. Find out by looking at outcomes for those groups, not just the overall rate, and by asking whose reality shaped the data in the first place.",
+      "category": "Catching AI bias and errors"
+    },
+    {
+      "q": "How do I stay connected to my team when AI handles communication?",
+      "a": "Let the tool carry the logistics and spend the freed time on presence. Use it to notice who might need a word, then show up yourself for the moments that decide whether a person feels seen. A message a person meant lands differently from one a machine generated, and people can tell.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "Can AI replace the human side of leadership?",
+      "a": "No. It can detect the pattern of an emotion and draft a fitting reply, but it does not feel anything, and on a hard day people know the difference between being processed and being met. As more routine work moves through machines, the human ability to connect and give meaning becomes the scarce, deciding skill.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "Does using AI make leaders less empathetic?",
+      "a": "It can, if they let the tool carry the emotional load: the note, the check-in, the difficult message. That is efficient and hollow. Use the machine for reach and routine, and keep the moments that matter human, especially under deadline, which is exactly when the temptation to automate them is strongest.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "How do I deliver bad news in an age of automation?",
+      "a": "In person, in your own voice. The tool can help you prepare, and it should never be the thing that tells someone their livelihood or hope just changed. What the person needs is a human being who is accountable and present, which is the whole point of the moment and the part a machine cannot supply.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "What should I never automate as a leader?",
+      "a": "The moments that carry real human weight: the hard conversation, the genuine thanks, the apology, the one-on-one where trust is built. Their value is that they are actually yours. Automate them and you keep the words while losing the thing they were for, and you spend trust you cannot easily earn back.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "How do I protect real connection at work as tools take over?",
+      "a": "Keep the high-stakes emotional moments off the machine and treat human attention as the thing to protect, not the thing to optimize away. Connection is a skill that fades without use, so practice it on purpose: have the conversations that could have been messages, and be present for what a tool could have handled.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "Is emotional intelligence still worth developing if AI can read sentiment?",
+      "a": "More than ever. A sentiment score captures the surface. A calm, polite message can hide someone at the end of their patience. As machines take the measurable work, the human ability to read what the score misses and respond as a person becomes the decisive skill, not an optional one.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "How do I keep one-on-ones meaningful when tools can run them?",
+      "a": "Prepare however you like, but in the room, be in the room, not managing a script. The entire value of a one-on-one is attention, the sense that this person and their work warrant your real presence. Conduct it from a tool and you send the opposite message, and people feel it immediately.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "How do I give people meaning when a machine assigns the work?",
+      "a": "Supply the why the tool cannot. People give their best when they understand how the work connects to something they care about, and someone they trust helped them see it. As the machine takes over the what and the how, the manager as meaning-maker becomes one of the most important parts of the job.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "What does the data miss about my people?",
+      "a": "Everything outside its frame: the strong performer whose home life is falling apart, the team one resignation from collapse, the customer whose neutral score hides real distress. The model sees the trace, not the life. A leader's job is to keep asking about the people the data cannot see.",
+      "category": "Staying human: empathy and connection"
+    },
+    {
+      "q": "Our AI vendor will not explain how the model works. Should we trust it?",
+      "a": "Trust it less, and calibrate carefully. You cannot finely trust a box you cannot see into, because when it is right you do not know why, so you cannot predict when it will be wrong. Push for visibility into what it optimizes and where it fails, and keep a human owning the decisions it shapes.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How do I decide whether to trust a new AI tool?",
+      "a": "Start from what it was built to do well and where it is known to be weak, then earn trust task by task from its real track record. A tool is not neutral infrastructure; it is a set of someone else's choices about what to optimize and what good enough means. Know whose judgment you are relying on.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How do I rebuild trust after an AI tool failed us?",
+      "a": "Recalibrate, do not exile or forget. A failure draws the boundary of what the tool can handle, which is worth more than a hundred smooth successes. Trust it a little less on the kind of call that broke it, keep using it where it stays strong, and watch the edge you just learned about.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How do I build my team's trust in an AI tool?",
+      "a": "Teach them what it is for and where it fails, and make it safe, even rewarded, to raise doubts. The goal is judgment around the tool, not blind use of it. The most dangerous team is not the one that distrusts the machine but the one that has learned to stay quiet when it is wrong.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "What makes an AI tool trustworthy?",
+      "a": "A reliable, honest track record on specific tasks, transparency about how it reaches an answer, and clear limits. Trust in a tool is narrow and earned piece by piece, unlike trust in a person, which is broad and built on character. A tool can be excellent at one thing and unreliable at another.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How is trusting AI different from trusting a person?",
+      "a": "A person earns trust broadly, through character over time. A tool earns it narrowly, task by task, and can be excellent at one thing and poor at the next. That is why a single verdict on a tool is almost always wrong, and why trust in it has to stay local and kept up to date.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "What breaks trust between a leader and their team around AI?",
+      "a": "Using the tool to replace judgment people were proud of, or punishing those who question it. Trust breaks when people feel managed by a machine instead of led by a person. It is rebuilt by keeping yourself visibly in the decisions and making it safe to say the model looks wrong.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How do I make it safe for people to question the AI?",
+      "a": "React well when they do. When someone challenges the tool and turns out to be right, reward it visibly. When they are wrong, keep it costless, or no one risks it next time. Psychological safety is the condition for catching the errors a confident tool will otherwise hide.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "Should I trust a tool more because it sounds confident?",
+      "a": "No. Confidence is a machine's default register, not something it earns on a given answer, so tone carries no information and can reassure you most when you should be most careful. Base trust on the track record, not the delivery: how often it has been right about this kind of thing, not how sure it sounds.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How do I keep accountability clear when a tool makes decisions?",
+      "a": "Refuse the hiding place. The moment the justification becomes the model said so, responsibility has evaporated. Insist a specific person owns each consequential decision in their own name, as if the tool had only advised. The machine can inform the call; it cannot absorb the responsibility for it.",
+      "category": "Trusting tools, vendors, and accountability"
+    },
+    {
+      "q": "How do I stay steady when AI systems fail?",
+      "a": "Lean on the judgment you kept in practice and the preparation you did in advance. Resilience is built in the calm and spent in the storm, so the leader who never fully outsourced their judgment is the one who can still function when the dashboard goes dark. Steadiness is also a leadership act. A team borrows its composure from you.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "How do I lead when everything about AI keeps changing?",
+      "a": "Aim your energy at what you control and let the rest go. You do not control the pace of the technology; you do control which tools you learn, how carefully you check them, the judgment you bring, and how you treat people. That focus is not resignation, it is the most practical thing you can do.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "How do I stop worrying about things I cannot control with AI?",
+      "a": "Use the old Stoic split: divide what you control from what you do not, and spend energy only on the first. Worry poured into the pace of the technology or the fate of your industry drowns you and changes nothing. The same energy on your learning, your checks, and your people actually moves something.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "How do I keep my team resilient through constant AI change?",
+      "a": "Give them stable ground: a clear sense of what stays theirs, honest information instead of silence to fill with fear, and practice making calls so their confidence does not depend on the tools. A team that stays standing keeps thinking and deciding well while others freeze.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "What mindset helps leaders adapt to AI?",
+      "a": "Hold your expertise lightly enough to update it, treat tools as temporary, and value the ability to keep learning over mastery of any one system. An identity fused to a single skill shatters when the world moves. One held lightly can adapt as the ground shifts.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "How do I prepare for the day the AI tools fail?",
+      "a": "Rehearse the outage before it happens. Picture the systems gone and ask what you could still do. The gaps you find are your homework. Keep some skills warm with unaided reps, so a failure is a drill you have practiced rather than a crisis you meet helpless, with everyone watching.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "How do I stay calm when I feel behind on AI?",
+      "a": "Step back and take the longer view. People have met the printing press, the factory, and the computer, each time sure the ground was ending, each time finding a way to lead through. The panic shrinks from a little distance, which frees you to take the next practical step instead of freezing.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "What is the most important habit for leading well with AI?",
+      "a": "Decide before you look. Forming your own view before the model speaks keeps you in the loop and keeps your judgment in training, and it is the single practice that rebuilds the thinking most workflows quietly erode. Small, repeated, and it compounds.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "How do I keep growing instead of coasting on AI?",
+      "a": "Keep choosing the discomfort of being a beginner. Seek the things you are not yet good at, do some work the harder way on purpose, and treat curiosity as a discipline rather than a mood. A capable tool makes coasting easy, so growth has to be chosen, again and again.",
+      "category": "Staying steady as AI changes everything"
+    },
+    {
+      "q": "What is the one thing to remember about leading with AI?",
+      "a": "Every AI-shaped decision is a small vote for the leader you are becoming. Defer without checking and you train a self that defers. Pause, form a view, and own the call, and you train one that stays in the loop. The technology will keep changing. Who you become while using it is the whole point.",
+      "category": "Staying steady as AI changes everything"
     }
   ]
 };
