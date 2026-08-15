@@ -2,46 +2,31 @@
 layout: base.njk
 permalink: /faq/
 title: FAQ
-pageDescription: Answers to common questions about The AI Leader's Mind by Gaurav Srivastava - the human side of leading in an AI-driven world.
+pageDescription: Answers to common questions about leading with AI - The AI Leader's Mind by Gaurav Srivastava. Judgment, trust, bias, ethics, resilience, and the human side of leading in an AI-driven world.
 ---
-{% set faqs = [
-  {
-    q: 'What is The AI Leader\'s Mind about?',
-    a: 'It is about the human side of leading in an AI-driven world. Not the technology, but the person using it, and the inner work that decides whether the machine makes you sharper or slowly replaceable. When AI can analyze the problem, draft the hard email, and spot the patterns you built a career on spotting, the real question becomes what is still yours to do. This book is about that part of the job.'
-  },
-  {
-    q: 'Is this a technical book about AI?',
-    a: 'No. There is no code and no hype. It is a leadership book. It draws on how AI actually behaves, but its subject is judgment, trust, resilience, and ethics: the parts of leading that a model cannot do for you.'
-  },
-  {
-    q: 'Who is it for?',
-    a: 'For CEOs, executives, managers, team leaders, and founders navigating artificial intelligence, and for anyone who would rather AI made them more capable than more replaceable.'
-  },
-  {
-    q: 'What risk does it warn about?',
-    a: 'The quiet one most leadership books miss. Just as heavy reliance on turn-by-turn navigation is linked to weaker memory for finding your own way, leaning on AI for every judgment call can thin the very skill the job depends on. The book shows how to keep it sharp.'
-  },
-  {
-    q: 'Is it backed by research?',
-    a: 'Yes. It draws on neuroscience, cognitive and behavioral science, and the research on trust and habit, each source named and cited in the book. Every framework is pressure-tested against the calls leaders actually make, from hiring and performance reviews to lending, fraud, and crisis.'
-  },
-  {
-    q: 'What will I be able to do after reading it?',
-    a: 'Judge a close call when the model sounds certain, build calibrated trust with your team and your tools, stay steady when the systems fail, make a hard ethical call with one repeatable framework, and run a single decision-making habit that keeps your judgment growing stronger with use.'
-  }
-] %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for item in faqs %}{"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for item in faqs.all %}{"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}{% if not loop.last %},{% endif %}{% endfor %}]}
 </script>
-<section class="section"><div class="wrap" style="max-width:820px">
+<section class="section"><div class="wrap" style="max-width:860px">
   <div class="eyebrow">FAQ</div>
-  <h1>Questions people ask</h1>
-  <p class="lead">Short, honest answers drawn from <em>{{ site.title }}</em>. Tap a question to open it.</p>
-  {% for item in faqs %}
-  <details class="faq">
-    <summary>{{ item.q }}</summary>
-    <div class="faq-a"><p>{{ item.a }}</p></div>
-  </details>
+  <h1>Questions people ask about leading with AI</h1>
+  <p class="lead">{{ faqs.all | length }} grounded answers drawn from <em>{{ site.title }}</em>, on judgment, trust, bias, empathy, fear, resilience, and ethics when a machine is in the room. Jump to a topic or browse the lot.</p>
+
+  <nav class="faq-nav" aria-label="FAQ topics">
+    {% for g in faqs.groups %}<a href="#{{ g.id }}">{{ g.category }}</a>{% endfor %}
+  </nav>
+
+  {% for g in faqs.groups %}
+  <section class="faq-group" id="{{ g.id }}">
+    <h2>{{ g.category }}</h2>
+    {% for item in g.items %}
+    <details class="faq">
+      <summary>{{ item.q }}</summary>
+      <div class="faq-a"><p>{{ item.a }}</p></div>
+    </details>
+    {% endfor %}
+  </section>
   {% endfor %}
-  <p class="faq-more" style="margin-top:22px"><a href="/book/">Read more about the book &rarr;</a></p>
+
+  <p class="faq-more" style="margin-top:28px"><a href="/book/">Read more about the book &rarr;</a>{% if site.amazon.kindle %} &nbsp;&middot;&nbsp; <a href="{{ site.amazon.kindle }}" target="_blank" rel="noopener">Get it on Kindle</a>{% endif %}</p>
 </div></section>

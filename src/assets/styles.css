@@ -137,6 +137,11 @@ article.post h2, article.post h3 { text-transform: none; margin-top: 28px; }
 .faq-a { padding: 0 0 16px; }
 .faq-a p { font-size: 17px; color: var(--ink-soft); margin: 0 0 10px; }
 .faq-more a { font-weight: 700; font-size: 14px; }
+.faq-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 10px; }
+.faq-nav a { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--amber-deep); text-decoration: none; padding: 6px 12px; border-radius: 999px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--line); }
+.faq-nav a:hover { background: var(--field-lo); }
+.faq-group { margin: 30px 0; scroll-margin-top: 84px; }
+.faq-group > h2 { font-size: 24px; color: var(--ink); margin: 0 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--amber); }
 .foot-links { font-size: 14px; }
 .foot-links a { color: var(--amber-deep); }
 
