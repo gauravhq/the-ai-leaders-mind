@@ -1,0 +1,21 @@
+---
+layout: base.njk
+permalink: /blog/
+title: Blog
+pageDescription: Short essays on leading, deciding, and staying human as AI moves deeper into the work - notes from The AI Leader's Mind by Gaurav Srivastava.
+---
+<section class="section"><div class="wrap">
+  <div class="eyebrow">Blog</div>
+  <h1>Notes on leading beside the machine</h1>
+  <p class="lead">Short essays on judgment, trust, and the inner work of leading in an AI-driven world. Drawn from the thinking behind <em>{{ site.title }}</em>.</p>
+  <div class="rule"><span></span></div>
+  <div class="post-list">
+    {% for post in collections.posts %}
+    <a class="post-item" href="{{ post.url }}">
+      <div class="date">{{ post.date | readableDate }}</div>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.pageDescription }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div></section>

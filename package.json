@@ -1,0 +1,14 @@
+{
+  "name": "the-ai-leaders-mind-site",
+  "version": "1.0.0",
+  "description": "Marketing website for the book The AI Leader's Mind: Mastering the Human Side of Leadership in an AI-Driven World by Gaurav Srivastava",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,59 @@
+---
+layout: base.njk
+permalink: /book/
+title: The Book
+pageDescription: About The AI Leader's Mind by Gaurav Srivastava - the human side of leading in an AI-driven world, and the inner work that decides whether AI makes you sharper or slowly replaceable.
+---
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","@id":{{ (site.url + "/book/#book") | dump | safe }},"name":{{ (site.title + ": " + site.subtitle) | dump | safe }},"author":{"@type":"Person","@id":{{ (site.url + "/author/#person") | dump | safe }},"name":{{ site.author | dump | safe }}},"publisher":{"@type":"Organization","name":{{ site.book.publisher | dump | safe }}},"description":{{ site.description | dump | safe }},"image":{{ (site.url + "/assets/cover.jpg") | dump | safe }},"url":{{ (site.url + "/book/") | dump | safe }},"inLanguage":{{ site.book.inLanguage | dump | safe }},"genre":{{ site.book.genre | dump | safe }},"datePublished":{{ site.book.datePublished | dump | safe }},"workExample":[{"@type":"Book","@id":{{ (site.url + "/book/#kindle") | dump | safe }},"bookFormat":"https://schema.org/EBook","name":{{ (site.title + " (Kindle Edition)") | dump | safe }},"inLanguage":{{ site.book.inLanguage | dump | safe }},"datePublished":{{ site.book.kindle.datePublished | dump | safe }},"numberOfPages":{{ site.book.kindle.numberOfPages | dump | safe }},"identifier":{"@type":"PropertyValue","propertyID":"ASIN","value":{{ site.book.kindle.asin | dump | safe }}},"url":{{ site.amazon.kindle | dump | safe }},"potentialAction":{"@type":"ReadAction","target":{{ site.amazon.kindle | dump | safe }}},"offers":{"@type":"Offer","url":{{ site.amazon.kindle | dump | safe }},"availability":"https://schema.org/InStock"}}{% if site.amazon.paperback %},{"@type":"Book","@id":{{ (site.url + "/book/#paperback") | dump | safe }},"bookFormat":"https://schema.org/Paperback","name":{{ (site.title + " (Paperback)") | dump | safe }},"inLanguage":{{ site.book.inLanguage | dump | safe }},"datePublished":{{ site.book.paperback.datePublished | dump | safe }},"numberOfPages":{{ site.book.paperback.numberOfPages | dump | safe }},"isbn":{{ site.book.paperback.isbn | dump | safe }},"identifier":{"@type":"PropertyValue","propertyID":"ASIN","value":{{ site.book.paperback.asin | dump | safe }}},"url":{{ site.amazon.paperback | dump | safe }},"offers":{"@type":"Offer","url":{{ site.amazon.paperback | dump | safe }},"availability":"https://schema.org/InStock"}}{% endif %}]}
+</script>
+<section class="section"><div class="wrap"><div class="panel">
+  <div class="eyebrow">The Book</div>
+  <h1 class="book-title" style="font-size:clamp(30px,4.5vw,44px);margin:0">{{ site.title }}</h1>
+  <p class="subtitle-line">{{ site.subtitle }}</p>
+  <p class="book-byline">by {{ site.author }}</p>
+
+  <p class="lead"><strong>By every number, the AI was working. So why did he feel like he was losing his company?</strong></p>
+  <p>Artificial intelligence can now analyze the problem, draft the hard email, and spot the pattern you built a career on spotting. So what is left that is actually yours?</p>
+  <p><em>The AI Leader&rsquo;s Mind</em> is a research-backed guide to the human side of leading in an AI-driven world. It is not another book about the technology. It is a book about the leader, and about the inner work that decides whether artificial intelligence makes you sharper or slowly replaceable.</p>
+  <p>The shift is already here. Roughly half of US adults now use AI chatbots. In one workplace study, a generative assistant raised productivity by 14 percent on average and lifted the least experienced workers by 34 percent. The tools are arriving faster than the wisdom to lead with them.</p>
+  <p>Drawing on neuroscience, cognitive and behavioral science, the research on trust and habit, and the hardest dilemmas leaders actually face, {{ site.author }} shows what happens in the mind when a model sounds confident and the clock is running, and what to do about it. Every framework is grounded in evidence and pressure-tested against the calls leaders make in the real world, from hiring and performance reviews to lending, fraud, and crisis.</p>
+  <p>It also names a risk most leadership books miss. Just as heavy reliance on turn-by-turn navigation is linked to weaker memory for finding your own way, leaning on AI for every judgment call can quietly thin the very skill the job depends on. This book shows you how to keep it sharp.</p>
+
+  <div class="rule"><span></span></div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Inside, you will learn how to</h3>
+      <ul class="checks">
+        <li>Spot the biases AI quietly amplifies, and stop them before a model scales them across your organization</li>
+        <li>Build calibrated trust across the triangle of you, your team, and the tool, so you neither defer blindly nor freeze</li>
+        <li>Lead people through fear and resistance to change, using the psychology of how humans actually adapt</li>
+        <li>Stay resilient when the systems fail, with practices that keep your judgment sharp when the dashboard goes dark</li>
+        <li>Make hard ethical decisions under pressure with one clear, repeatable framework you can use on a Monday</li>
+        <li>Protect emotional intelligence and human trust as more of the work quietly moves through machines</li>
+        <li>Run a single decision-making habit every time AI shapes a call, so your judgment grows stronger with use</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>The editions</h3>
+      <ul class="checks">
+        <li>Kindle - ASIN {{ site.book.kindle.asin }}, {{ site.book.kindle.numberOfPages }} pages</li>
+        {% if site.book.paperback.asin %}<li>Paperback - ASIN {{ site.book.paperback.asin }}, ISBN {{ site.book.paperback.isbn }}, {{ site.book.paperback.numberOfPages }} pages</li>{% endif %}
+        <li>Published {{ site.book.datePublished | readableDate }}</li>
+        <li>Language: English</li>
+        <li>Publisher: {{ site.book.publisher }}</li>
+      </ul>
+      <p style="margin-top:14px;color:var(--ink-soft)">Essential reading for CEOs, executives, managers, team leaders, and founders navigating artificial intelligence, and for anyone who wants AI to make them more capable, not more replaceable.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:24px"><strong>It is a practical operating system for the human side of leadership: how to decide, how to keep trust, and how to stay the leader your people can still reach behind the machine.</strong></p>
+  <p><em>The next AI-shaped decision you make is a vote for the kind of leader you become. Here is how to cast it well.</em></p>
+
+  <div class="buybar" style="border-top:none">
+    <div class="btn-row">
+      {% if site.amazon.kindle %}<a class="btn" href="{{ site.amazon.kindle }}" target="_blank" rel="noopener">Buy on Kindle</a>{% endif %}
+      {% if site.amazon.paperback %}<a class="btn ghost" href="{{ site.amazon.paperback }}" target="_blank" rel="noopener">Buy the paperback</a>{% endif %}
+    </div>
+  </div>
+</div></div></section>

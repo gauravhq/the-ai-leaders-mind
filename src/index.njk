@@ -1,0 +1,86 @@
+---
+layout: base.njk
+permalink: /
+---
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">A book by {{ site.author }}</div>
+      <h1>The AI<br>Leader&rsquo;s Mind</h1>
+      <p class="sub">{{ site.subtitle }}</p>
+      <p class="lead" style="color:var(--ink-soft);max-width:36ch">If the machine can analyze the problem, draft the hard email, and spot the pattern you built a career on spotting, what is left that is actually yours?</p>
+      <div class="buy">
+        <div class="btn-row">
+          {% if site.amazon.kindle %}<a class="btn" href="{{ site.amazon.kindle }}" target="_blank" rel="noopener">Read it on Kindle</a>{% endif %}
+          <a class="btn ghost" href="/book/">About the book</a>
+        </div>
+      </div>
+    </div>
+    <div class="cover-shot">
+      <img src="/assets/cover.jpg" alt="The AI Leader's Mind: Mastering the Human Side of Leadership in an AI-Driven World, book cover by Gaurav Srivastava" width="320" height="512">
+    </div>
+  </div>
+</section>
+
+<section class="section"><div class="wrap"><div class="panel">
+  <h2>Every metric said the AI was working</h2>
+  <p class="lead">Productivity up. Bias down. The reviews the new system produced were fairer and steadier than anything his managers had managed on their own. And still one quiet question kept surfacing, the question now humming under every desk where a capable AI sits between a leader and a decision: what is left that is actually mine?</p>
+  <p><strong>The AI Leader&rsquo;s Mind</strong> is a research-backed guide to that question. It is not another book about the technology. It is a book about the leader, and about the inner work that decides whether artificial intelligence makes you sharper or slowly replaceable.</p>
+  <p>The shift is already here. The tools can do more of the job every month, and they are arriving faster than the wisdom to lead with them.</p>
+</div></div></section>
+
+<section class="section"><div class="wrap"><div class="panel">
+  <h2>Inside, you will learn how to</h2>
+  <div class="rule"><span></span></div>
+  <ul class="checks">
+    <li>Spot the biases AI quietly amplifies, and the counter-moves that stop automation bias, anchoring, and confirmation bias before a model scales them.</li>
+    <li>Build calibrated trust across the triangle of you, your team, and the tool, so you neither defer blindly nor freeze.</li>
+    <li>Lead people through fear and resistance to change, using the psychology of how humans actually adapt.</li>
+    <li>Stay resilient when the systems fail, and keep your judgment sharp when the dashboard goes dark.</li>
+    <li>Make hard ethical calls under pressure with one clear, repeatable framework you can use on a Monday.</li>
+    <li>Run a single decision-making habit every time AI shapes a call, so your judgment grows stronger with use instead of going soft.</li>
+  </ul>
+</div></div></section>
+
+<section class="section"><div class="wrap"><div class="panel" style="text-align:center">
+  <p class="pullquote">What is left that is actually yours?</p>
+  <p class="lead" style="color:var(--ink-soft)">The inner work that decides whether AI makes you sharper, or slowly replaceable.</p>
+</div></div></section>
+
+<section class="section"><div class="wrap"><div class="panel">
+  <h2>Grounded, not hand-wavy</h2>
+  <p class="lead">Every framework is grounded in evidence and pressure-tested against the calls leaders actually make, from hiring and performance reviews to lending, fraud, and crisis. The arguments draw on:</p>
+  <div class="rule"><span></span></div>
+  <ul class="checks">
+    <li>The neuroscience of working beside a machine</li>
+    <li>Automation bias and cognitive-forcing</li>
+    <li>The research on trust and calibration</li>
+    <li>How habits form, and how a skill fades with disuse</li>
+    <li>Stoic-grounded resilience</li>
+    <li>The ethics of high-stakes, automated decisions</li>
+  </ul>
+</div></div></section>
+
+<section class="section"><div class="wrap">
+  <h2 style="color:var(--ink);text-align:center;margin-bottom:6px">From the blog</h2>
+  <div class="rule"><span></span></div>
+  <div class="post-list">
+    {% for post in collections.posts %}{% if loop.index <= 3 %}
+    <a class="post-item" href="{{ post.url }}">
+      <div class="date">{{ post.date | readableDate }}</div>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.pageDescription }}</p>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+  <p style="text-align:center;margin-top:20px"><a class="btn ghost" href="/blog/">Read the blog</a></p>
+</div></section>
+
+<section class="section"><div class="wrap"><div class="panel" style="text-align:center">
+  <p class="pullquote">The next AI-shaped decision you make is a vote for the kind of leader you become.</p>
+  <p class="lead" style="color:var(--ink-soft)">Here is how to cast it well.</p>
+  <div class="btn-row" style="justify-content:center;margin-top:16px">
+    {% if site.amazon.kindle %}<a class="btn" href="{{ site.amazon.kindle }}" target="_blank" rel="noopener">Get it on Kindle</a>{% endif %}
+    {% if site.amazon.paperback %}<a class="btn ghost" href="{{ site.amazon.paperback }}" target="_blank" rel="noopener">Get the paperback</a>{% endif %}
+  </div>
+</div></div></section>

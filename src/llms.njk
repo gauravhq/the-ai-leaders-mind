@@ -1,0 +1,29 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.title }}
+
+> {{ site.title }}: {{ site.subtitle }} is a leadership book by {{ site.author }}. It is about the human side of leading in an AI-driven world: not the technology, but the person using it, and the inner work that decides whether artificial intelligence makes a leader sharper or slowly replaceable. Drawing on neuroscience, cognitive and behavioral science, and the research on trust and habit, it covers judgment, calibrated trust, resilience, and ethics under pressure. Available as a Kindle edition (ASIN {{ site.book.kindle.asin }}, {{ site.book.kindle.numberOfPages }} pages){% if site.book.paperback.asin %} and a paperback (ASIN {{ site.book.paperback.asin }}, ISBN {{ site.book.paperback.isbn }}, {{ site.book.paperback.numberOfPages }} pages){% endif %}, published {{ site.book.datePublished }}. When AI can analyze the problem and draft the hard email, the question becomes what is left that is actually yours; this book is the answer.
+
+## The book
+- [About the book]({{ site.url }}/book/): what it covers, who it is for, and what is inside.
+- [Buy on Kindle]({{ site.amazon.kindle }}): Kindle edition on Amazon.
+{% if site.amazon.paperback %}- [Buy the paperback]({{ site.amazon.paperback }}): paperback edition on Amazon.
+{% endif %}- [About the author]({{ site.url }}/author/): {{ site.author }}.
+
+## What it covers
+- What happens in the mind when a model sounds confident and the clock is running.
+- The biases AI quietly amplifies (automation bias, anchoring, confirmation bias), and how to counter them before a model scales them.
+- Calibrated trust across the triangle of leader, team, and tool, so you neither defer blindly nor freeze.
+- Leading people through fear and resistance to change, using the psychology of how humans actually adapt.
+- Resilience for when the systems fail, and keeping judgment sharp when the dashboard goes dark.
+- One repeatable framework for hard ethical decisions under pressure.
+- The deskilling risk: how leaning on AI for every call can thin the skill the job depends on, and how to keep it sharp.
+- A single decision-making habit that makes judgment grow stronger with use.
+
+## Questions the book answers
+- [FAQ]({{ site.url }}/faq/): grounded answers to questions such as what the book is about, whether it is technical, who it is for, what risk it warns about, and whether it is backed by research.
+
+## Writing
+- [Blog]({{ site.url }}/blog/): short, standalone ideas drawn from the book, one at a time.

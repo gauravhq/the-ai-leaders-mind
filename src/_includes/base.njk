@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <title>{% if title %}{{ title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}</title>
+  <meta name="description" content="{{ pageDescription or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{% if tags and 'posts' in tags %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ pageDescription or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ pageDescription or site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/cover.jpg">
+  {% if site.googleVerification %}<meta name="google-site-verification" content="{{ site.googleVerification }}">{% endif %}
+  {% if site.analytics.plausibleDomain %}<script defer data-domain="{{ site.analytics.plausibleDomain }}" src="https://plausible.io/js/script.js"></script>{% endif %}
+  {% if site.analytics.ga4Id %}<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4Id }}"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.analytics.ga4Id }}');</script>{% endif %}
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","@id":{{ (site.url + "/#website") | dump | safe }},"name":{{ site.title | dump | safe }},"url":{{ (site.url + "/") | dump | safe }},"description":{{ site.description | dump | safe }},"inLanguage":"en","author":{"@type":"Person","@id":{{ (site.url + "/author/#person") | dump | safe }},"name":{{ site.author | dump | safe }}}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">The AI Leader&rsquo;s Mind</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/book/">The Book</a>
+        <a href="/blog/">Blog</a>
+        <a href="/author/">Author</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="rule"><span></span></div>
+      <p><span class="book-title">{{ site.title }}</span> - {{ site.subtitle }}<br>by {{ site.author }}</p>
+      <p class="foot-links"><a href="/book/">The Book</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/author/">Author</a></p>
+      <p>&copy; {% year %} {{ site.author }}. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

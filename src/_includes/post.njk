@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ title | dump | safe }},"description":{{ pageDescription | dump | safe }},"datePublished":{{ (date | isoDate) | dump | safe }},"author":{"@type":"Person","name":{{ site.author | dump | safe }}},"publisher":{"@type":"Organization","name":{{ site.title | dump | safe }}},"image":{{ (site.url + "/assets/cover.jpg") | dump | safe }},"mainEntityOfPage":{{ (site.url + page.url) | dump | safe }},"isPartOf":{"@type":"Book","name":{{ (site.title + ": " + site.subtitle) | dump | safe }},"author":{"@type":"Person","name":{{ site.author | dump | safe }}},"identifier":{"@type":"PropertyValue","propertyID":"ASIN","value":{{ site.book.kindle.asin | dump | safe }}}}}
+</script>
+<section class="section"><div class="wrap" style="max-width:760px">
+  <article class="post">
+    <div class="date">{{ date | readableDate }}</div>
+    <p class="frombook">From <a href="/book/"><em>{{ site.title }}</em></a> by {{ site.author }}</p>
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+    <div class="buybar">
+      <p><strong>This is one small idea from <em>{{ site.title }}: {{ site.subtitle }}</em> by {{ site.author }}.</strong></p>
+      <div class="btn-row">
+        {% if site.amazon.kindle %}<a class="btn" href="{{ site.amazon.kindle }}" target="_blank" rel="noopener">Get it on Kindle</a>{% endif %}
+        {% if site.amazon.paperback %}<a class="btn" href="{{ site.amazon.paperback }}" target="_blank" rel="noopener">Get the paperback</a>{% endif %}
+        <a class="btn ghost" href="/book/">About the book</a>
+      </div>
+      {% if not site.amazon.paperback %}<p class="soon">Paperback edition coming soon.</p>{% endif %}
+    </div>
+  </article>
+  <p style="margin-top:24px"><a href="/blog/">&larr; All posts</a></p>
+</div></section>

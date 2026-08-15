@@ -1,0 +1,18 @@
+---
+layout: base.njk
+permalink: /author/
+title: Author
+pageDescription: About Gaurav Srivastava, author of The AI Leader's Mind.
+---
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","@id":{{ (site.url + "/author/#person") | dump | safe }},"name":{{ site.author | dump | safe }},"url":{{ (site.url + "/author/") | dump | safe }},"jobTitle":"Author","description":{{ "Author of The AI Leader's Mind. Twenty years in technology and consulting, working where technology meets human behavior." | dump | safe }},"knowsAbout":["leadership","artificial intelligence","decision-making","human-AI collaboration","technology","organizational behavior"]{% if site.authorImage %},"image":{{ site.authorImage | dump | safe }}{% endif %}{% if site.authorSameAs and site.authorSameAs.length %},"sameAs":{{ site.authorSameAs | dump | safe }}{% endif %}}
+</script>
+<section class="section"><div class="wrap"><div class="panel" style="max-width:760px;margin:0 auto">
+  <div class="eyebrow">The Author</div>
+  <h2 class="author-name">Gaurav Srivastava</h2>
+  <p class="lead">A writer on how to lead and decide well as machines move deeper into the work. He moves easily from the inner life of a leader to the hard practical calls the job demands.</p>
+  <p>He has spent twenty years in technology and consulting, working where technology meets human behavior. He wrote this book after watching capable leaders make sharp technical calls that quietly hollowed out the people around them.</p>
+  <p>His books tend to begin the same way: he sets out to understand a subject that has caught him, spends months on the research, and lets his own experience shape what it becomes. Each one is the book he wishes he had found sooner.</p>
+  <div class="rule"><span></span></div>
+  <p><a class="btn ghost" href="/book/">Read about the book</a></p>
+</div></div></section>
