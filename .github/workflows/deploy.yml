@@ -25,7 +25,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - run: npm install
+      # --- BookHarness gates: any failure blocks the deploy (checklist 25) ---
+      - name: Gate - blog plan (200 posts, weekly, first post one year before launch)
+        run: python ci/check_blog_plan.py src
+      - name: Gate - content style (0 em dashes, semicolons in band, banned-word clean)
+        run: python ci/check_style.py
+      - name: Build for verification (root prefix)
+        env:
+          PATH_PREFIX: "/"
+        run: npx @11ty/eleventy --output=_verify
+      - name: Gate - verify built site (sitemap/feed/JSON-LD/links/em-dash/FAQ>=100)
+        run: python ci/verify_site.py _verify
+      # --- deploy build (project pathPrefix) ---
       - name: Build site
         env:
           PATH_PREFIX: "/the-ai-leaders-mind/"
