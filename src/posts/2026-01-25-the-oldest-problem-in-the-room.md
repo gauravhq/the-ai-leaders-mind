@@ -1,6 +1,6 @@
 ---
 title: "The Oldest Problem in the Room"
-date: 2026-08-23
+date: 2026-01-25
 pageDescription: "The technology is new. The human responses to it are ancient."
 ---
 For all the talk of algorithms and models, the hardest problem in AI leadership is the oldest one there is. It is people.

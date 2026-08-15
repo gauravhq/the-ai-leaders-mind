@@ -65,6 +65,13 @@ permalink: /
   <h2 style="color:var(--ink);text-align:center;margin-bottom:6px">From the blog</h2>
   <div class="rule"><span></span></div>
   <div class="post-list">
+    {% if featured %}
+    <a class="post-item featured" href="{{ featured.url }}">
+      <div class="date">Featured this week</div>
+      <h3>{{ featured.title }}</h3>
+      <p>{{ featured.description }}</p>
+    </a>
+    {% endif %}
     {% for post in collections.posts %}{% if loop.index <= 3 %}
     <a class="post-item" href="{{ post.url }}">
       <div class="date">{{ post.date | readableDate }}</div>

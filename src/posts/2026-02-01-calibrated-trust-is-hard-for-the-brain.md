@@ -1,6 +1,6 @@
 ---
 title: "Calibrated Trust Is Hard for the Brain"
-date: 2026-08-30
+date: 2026-02-01
 pageDescription: "The mind wants one setting. Good judgment lives in the messier truth."
 ---
 The reasonable goal with any AI tool is calibrated trust, relying on it exactly as much as it has earned. The trouble is that your brain is not built for calibration. It is built for shortcuts.

@@ -117,6 +117,7 @@ ul.checks li::before { content: ""; position: absolute; left: 0; top: 9px; width
 .post-item .date { color: var(--amber-deep); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .5px; }
 .post-item h3 { margin: 6px 0 8px; font-size: 22px; text-transform: none; font-family: "Playfair Display", Georgia, serif; }
 .post-item p { margin: 0; color: var(--ink-soft); }
+.post-item.featured { box-shadow: 0 8px 22px rgba(0,0,0,.12), inset 0 0 0 2px var(--amber); background: var(--field-hi); }
 
 article.post { background: var(--paper); border-radius: var(--radius); padding: 40px; box-shadow: 0 12px 34px rgba(0,0,0,.16); }
 article.post .date { color: var(--amber-deep); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: .5px; }

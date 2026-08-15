@@ -1,6 +1,6 @@
 ---
 title: "Purpose the Metric Cannot Hold"
-date: 2026-09-06
+date: 2026-02-08
 pageDescription: "A machine optimizes what you can measure. What is worth measuring stays your job."
 ---
 A machine can optimize almost anything you can measure. What it cannot do is tell you what is worth optimizing for. That question is yours, and it does not survive being handed over.

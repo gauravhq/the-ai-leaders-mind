@@ -1,6 +1,6 @@
 ---
 title: "The Three Phases"
-date: 2026-08-16
+date: 2026-01-18
 pageDescription: "Most leaders think they are in phase one while already living in phase two."
 ---
 AI did not arrive in leadership all at once. It came, and is still coming, in three phases, and knowing which one you are in changes what your job is.
