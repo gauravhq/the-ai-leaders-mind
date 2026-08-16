@@ -2,7 +2,9 @@
 
 Reads the Markdown chapter files of a manuscript and reports, per chapter and per manuscript:
 em dashes, semicolons, banned words, banned phrases, ellipsis overuse, sentence-length variety,
-fragment count, And/But/So openings. Enforces STYLE_RULES.md via tools/style_rules.py.
+local same-length run (monotony the aggregate std hides), fragment count, And/But/So openings.
+Rhythm metrics are suppressed below a short-text floor (~30 sentences). Enforces STYLE_RULES.md via
+tools/style_rules.py.
 
 Usage:
     python scan.py [MANUSCRIPT_DIR]
@@ -23,6 +25,51 @@ from style_rules import (BANNED_WORDS, BANNED_PHRASES, STIFF_TRANSITIONS,
 DOUBLE_WORD_ALLOW = {"had", "that", "so", "no", "very", "really", "ha"}
 # Dinkus / scene-break lines that legitimately hold an odd count of '*'.
 _DINKUS = {"* * *", "***", "• • •", "* * * *"}
+
+# Local-monotony + short-text floors (AI-vs-human writing report sec 2.3). Aggregate sentence-length std
+# can look healthy while a long LOCAL run of same-length sentences still reads mechanical, and rhythm
+# metrics are simply unreliable on short text. These are SOFT (advisory) and never block --gate.
+_RUN_MAX = 8            # soft-flag a run of this many consecutive sentences within +-2 words of each other
+_MIN_SENTS = 30         # do not judge rhythm (variety/run/fragments/openers) below this many sentences
+_CHAPTER_MIN_WC = 1000  # below this a unit is a post/FAQ entry/section, not a chapter; skip chapter-uniformity
+
+
+def _longest_run(sl, tol=2):
+    """Longest run of consecutive sentences whose length stays within +-tol words of the previous one.
+    Catches local monotony that the aggregate std conceals (report sec 2.3, demonstrated in its own
+    self-audit: std 11.3 looked healthy while a 16-sentence same-length run sat hidden inside it)."""
+    if not sl:
+        return 0
+    best = cur = 1
+    for i in range(1, len(sl)):
+        if abs(sl[i] - sl[i - 1]) <= tol:
+            cur += 1
+            best = max(best, cur)
+        else:
+            cur = 1
+    return best
+
+
+def _mtld_one(tokens, thr=0.72):
+    factors, types, count = 0, set(), 0
+    for t in tokens:
+        count += 1
+        types.add(t)
+        if len(types) / count <= thr:
+            factors += 1
+            types, count = set(), 0
+    if count > 0:
+        factors += (1 - len(types) / count) / (1 - thr)
+    return len(tokens) / factors if factors else float(len(tokens))
+
+
+def _mtld(tokens, thr=0.72):
+    """Measure of Textual Lexical Diversity: length-robust vocabulary richness (report sec 2.3; use
+    instead of raw TTR, which falls mechanically with length). Reported for information; not gated,
+    because no genre-matched threshold is published (report marks it [DATA NEEDED])."""
+    if len(tokens) < 100:            # report sec 2.3: MTLD needs ~100 tokens to be meaningful
+        return 0.0
+    return round((_mtld_one(tokens, thr) + _mtld_one(list(reversed(tokens)), thr)) / 2, 1)
 
 
 def _syllables(word):
@@ -60,6 +107,8 @@ def analyze(text):
     sl = [len(s.split()) for s in sents]
     avg = sum(sl) / len(sl) if sl else 0
     std = (sum((x - avg) ** 2 for x in sl) / len(sl)) ** 0.5 if sl else 0
+    run = _longest_run(sl)
+    mtld = _mtld(re.findall(r"[a-z']+", body.lower()))
     em = text.count(chr(0x2014)) + len(re.findall(r"(?<!-)--(?!-)", text))
     semi = text.count(";")
     # curly/smart punctuation: manuscripts are authored in ASCII punctuation; a
@@ -93,7 +142,7 @@ def analyze(text):
     stiff = 0
     for w in STIFF_TRANSITIONS:
         stiff += len(re.findall(r"(?:^|\.\s|!\s|\?\s)" + w + r"\b", body))
-    return dict(wc=wc, ns=len(sl), avg=round(avg, 1), std=round(std, 1),
+    return dict(wc=wc, ns=len(sl), avg=round(avg, 1), std=round(std, 1), run=run, mtld=mtld,
                 mn=min(sl) if sl else 0, mx=max(sl) if sl else 0,
                 em=em, semi=semi, curly=curly, dbl=dbl, star=star,
                 elli=elli, abs=abs_st, frags=frags,
@@ -189,12 +238,16 @@ def main():
             r"dedication|epigraph|preface|discussion|acknowledg",
             name, re.I)
         if r["wc"] > 800 and not is_reference:
-            if r["std"] < min_std:
-                soft.append(f"LOW VARIETY: std={r['std']} (target >= {min_std})")
-            if r["frags"] < TARGETS["fragments_min"]:
-                soft.append(f"FEW FRAGMENTS: {r['frags']} (target >= {TARGETS['fragments_min']})")
-            if r["abs"] < TARGETS["abs_starts_min"]:
-                soft.append(f"FEW And/But/So: {r['abs']} (target >= {TARGETS['abs_starts_min']})")
+            if r["ns"] >= _MIN_SENTS:   # rhythm metrics are unreliable below ~30 sentences (report sec 2.3)
+                if r["std"] < min_std:
+                    soft.append(f"LOW VARIETY: std={r['std']} (target >= {min_std})")
+                if r["run"] >= _RUN_MAX:
+                    soft.append(f"MONOTONY: {r['run']} consecutive sentences within +-2 words "
+                                f"(>= {_RUN_MAX}); the aggregate std hides this (report sec 2.3)")
+                if r["frags"] < TARGETS["fragments_min"]:
+                    soft.append(f"FEW FRAGMENTS: {r['frags']} (target >= {TARGETS['fragments_min']})")
+                if r["abs"] < TARGETS["abs_starts_min"]:
+                    soft.append(f"FEW And/But/So: {r['abs']} (target >= {TARGETS['abs_starts_min']})")
             if grade_target is not None and r["grade"] > grade_target:
                 soft.append(f"READING LEVEL: grade {r['grade']} > target {grade_target}")
         total_hard += len(hard)
@@ -224,18 +277,18 @@ def main():
         for t, c in sorted(tic_counts.items(), key=lambda x: -x[1]):
             print(f"  '{t}': {c}" + ("   <-- high, thin these first" if c >= 8 else ""))
 
-    print(f"\n{'Chapter':<22}{'Words':>6}{'Snts':>5}{'Avg':>5}{'Std':>5}{'Frag':>5}"
-          f"{'ABS':>4}{'Em':>3}{';':>3}{'GL':>6}{'FRE':>6}")
-    print("-" * 78)
+    print(f"\n{'Chapter':<22}{'Words':>6}{'Snts':>5}{'Avg':>5}{'Std':>5}{'Run':>5}{'Frag':>5}"
+          f"{'ABS':>4}{'Em':>3}{';':>3}{'GL':>6}{'FRE':>6}{'MTLD':>6}")
+    print("-" * 84)
     for name, r in rows:
-        print(f"{name[:22]:<22}{r['wc']:>6}{r['ns']:>5}{r['avg']:>5}{r['std']:>5}{r['frags']:>5}"
-              f"{r['abs']:>4}{r['em']:>3}{r['semi']:>3}{r['grade']:>6}{r['fre']:>6}")
-    print("GL = Flesch-Kincaid grade level, FRE = Flesch Reading Ease (higher = easier). "
-          "Use --grade N to flag chapters above a target grade.")
+        print(f"{name[:22]:<22}{r['wc']:>6}{r['ns']:>5}{r['avg']:>5}{r['std']:>5}{r['run']:>5}{r['frags']:>5}"
+              f"{r['abs']:>4}{r['em']:>3}{r['semi']:>3}{r['grade']:>6}{r['fre']:>6}{r['mtld']:>6}")
+    print("Run = longest same-length run (local monotony, lower better). MTLD = lexical diversity "
+          "(length-robust, higher = more varied). GL/FRE = grade/reading-ease; use --grade N to flag.")
 
     # length profile: total words + chapter-length variation (uniform lengths read inhuman)
     total_words = sum(r["wc"] for _, r in rows)
-    chap_wc = [r["wc"] for _, r in rows if r["wc"] >= 600]
+    chap_wc = [r["wc"] for _, r in rows if r["wc"] >= _CHAPTER_MIN_WC]
     ms_violations = []
     cv = 0.0
     if len(chap_wc) >= 3:
@@ -245,7 +298,7 @@ def main():
     print("\n-- LENGTH PROFILE --")
     print(f"  Total words: {total_words}")
     if chap_wc:
-        print(f"  Chapters (>=600w): {len(chap_wc)}  min {min(chap_wc)}  max {max(chap_wc)}  "
+        print(f"  Chapters (>={_CHAPTER_MIN_WC}w): {len(chap_wc)}  min {min(chap_wc)}  max {max(chap_wc)}  "
               f"mean {int(sum(chap_wc)/len(chap_wc))}  length-variation CV {cv:.2f}")
     if total_min and total_words < total_min:
         ms_violations.append(f"TOTAL {total_words} words < target min {total_min}")
