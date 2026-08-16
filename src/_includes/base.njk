@@ -24,6 +24,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","@id":{{ (site.url + "/#website") | dump | safe }},"name":{{ site.title | dump | safe }},"url":{{ (site.url + "/") | dump | safe }},"description":{{ site.description | dump | safe }},"inLanguage":"en","author":{"@type":"Person","@id":{{ (site.url + "/author/#person") | dump | safe }},"name":{{ site.author | dump | safe }}}}
   </script>
+  {{ page.url | breadcrumbLd(title, site.url) | safe }}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..700&display=swap" rel="stylesheet">

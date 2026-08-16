@@ -20,6 +20,28 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString());
   eleventyConfig.addFilter("rssDate", (d) => new Date(d).toUTCString());
+
+  // BreadcrumbList JSON-LD for every inner page (GEO structure; checklist 25 item 14p). Built in JS to
+  // avoid Nunjucks loop-scoping and to guarantee valid JSON via JSON.stringify. Returns "" for the home
+  // page. URLs are absolute (site.url already carries the project path), so the base plugin leaves them.
+  eleventyConfig.addFilter("breadcrumbLd", (url, pageTitle, siteUrl) => {
+    if (!url || url === "/") return "";
+    const segs = url.split("/").filter(Boolean);
+    const items = [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" }];
+    let acc = "";
+    segs.forEach((seg, i) => {
+      acc += "/" + seg;
+      const last = i === segs.length - 1;
+      const name = last && pageTitle
+        ? pageTitle
+        : seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      items.push({ "@type": "ListItem", position: i + 2, name, item: siteUrl + acc + "/" });
+    });
+    return '<script type="application/ld+json">' +
+      JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: items }) +
+      "</script>";
+  });
+
   eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
 
   return {
