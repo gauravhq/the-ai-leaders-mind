@@ -72,13 +72,13 @@ permalink: /
       <p>{{ featured.description }}</p>
     </a>
     {% endif %}
-    {% for post in collections.posts %}{% if loop.index <= 3 %}
+    {% for post in collections.posts | recentExcluding(featured.url, 3) %}
     <a class="post-item" href="{{ post.url }}">
       <div class="date">{{ post.date | readableDate }}</div>
       <h3>{{ post.data.title }}</h3>
       <p>{{ post.data.pageDescription }}</p>
     </a>
-    {% endif %}{% endfor %}
+    {% endfor %}
   </div>
   <p style="text-align:center;margin-top:20px"><a class="btn ghost" href="/blog/">Read the blog</a></p>
 </div></section>
