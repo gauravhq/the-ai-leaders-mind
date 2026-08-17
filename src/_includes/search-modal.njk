@@ -43,6 +43,21 @@
           pageSize: 6,
           resetStyles: false,
         });
+        // rescue natural-language questions that strict AND matching drops to zero
+        var enh = document.createElement("script");
+        enh.src = "{{ '/assets/search-enhance.js' | url }}";
+        enh.onload = function () {
+          window.SearchEnhance({
+            container: "#searchModalUi",
+            bundlePath: BUNDLE,
+            links: [
+              { url: "{{ '/faq/' | url }}", label: "Browse the FAQ" },
+              { url: "{{ '/blog/' | url }}", label: "Browse all posts" },
+              { url: "{{ '/book/' | url }}", label: "About the book" }
+            ]
+          });
+        };
+        document.head.appendChild(enh);
         resolve();
       };
       js.onerror = function () {

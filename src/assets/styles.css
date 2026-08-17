@@ -207,6 +207,32 @@ article.post h2, article.post h3 { text-transform: none; margin-top: 28px; }
 #searchModalUi .pagefind-ui__search-clear,
 #searchModalUi .pagefind-ui__button { font-family: var(--sans, system-ui, sans-serif); color: var(--ink); }
 
+/* zero-result rescue: closest matches, or real next steps. never a dead end. */
+.search-fallback { margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--line); }
+.search-fallback__note { font-family: var(--sans); font-size: 14px; color: var(--ink-soft); margin: 0 0 10px; }
+.search-fallback__term {
+  font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--amber-deep); margin: 14px 0 6px;
+}
+.search-fallback__term span { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--ink-soft); }
+.search-fallback__results, .search-fallback__links { list-style: none; padding: 0; margin: 0; }
+.search-fallback__results li { margin: 0 0 12px; }
+.search-fallback__results a {
+  font-family: "Playfair Display", Georgia, serif; font-size: 17px;
+  color: var(--ink); text-decoration: none; display: block;
+}
+.search-fallback__results a:hover { color: var(--amber-deep); }
+.search-fallback__results span {
+  display: block; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-top: 2px;
+}
+.search-fallback__links { display: flex; flex-wrap: wrap; gap: 8px; }
+.search-fallback__links a {
+  font-family: var(--sans); font-size: 14px; font-weight: 600; text-decoration: none;
+  color: var(--ink); background: var(--paper); border-radius: 999px; padding: 7px 14px;
+  border: 1px solid var(--line);
+}
+.search-fallback__links a:hover { color: var(--amber-deep); }
+
 @media (max-width: 760px) {
   .hero .wrap { grid-template-columns: 1fr; text-align: center; }
   .hero .sub { margin: 0 auto; }
