@@ -224,10 +224,12 @@
         }
 
         if (questions.length) {
-          html += '<p class="search-fallback__term">Closest questions</p><ul class="search-fallback__results">';
+          html += '<p class="search-fallback__term">Closest matches</p><ul class="search-fallback__results">';
           questions.forEach(function (e) {
+            // name the source, so an FAQ answer is not mistaken for a blog post
+            var where = e.topic ? '<em>' + esc(e.topic) + "</em> - " : "";
             html += '<li><a href="' + esc(e.url) + '">' + esc(e.q) + "</a><span>"
-              + esc(String(e.a || "").slice(0, 120)) + "</span></li>";
+              + where + esc(String(e.a || "").slice(0, 110)) + "</span></li>";
           });
           html += "</ul>";
         }

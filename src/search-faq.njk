@@ -2,12 +2,22 @@
 permalink: /search-faq.json
 eleventyExcludeFromCollections: true
 ---
-{#- A tiny question bank for search to match against.
+{#- The bank that search matches a reader's QUESTION against.
 
-    Readers type QUESTIONS, and the FAQ is a bank of questions, so matching question-to-question is
-    far more accurate than matching a question against page prose. Fetched lazily, only when a search
-    needs it. Each entry deep-links to the single answer, which faq.njk expands on arrival. -#}
-{%- set out = [] -%}
-[{% for g in faqs.groups %}{% for item in g.items %}{% if not loop.first or not g.id %}{% endif %}
+    Two kinds of entry, same shape, so one matcher covers the whole site:
+      - every FAQ answer, deep-linked to the single question (faq.njk expands it on arrival)
+      - every PUBLISHED blog post, matched on its title + description
+
+    Posts matter here: without them the smart question-matching tier only ever reaches the FAQ, and a
+    site's 200 posts stay reachable only by single-word matching. `collections.posts` is already
+    date-gated, so future drip posts stay out until they publish. Fetched lazily, only when a search
+    finds no exact hit. -#}
+[
+{%- for g in faqs.groups %}{% for item in g.items %}
 {"q":{{ item.q | dump | safe }},"a":{{ item.a | truncate(160) | dump | safe }},"url":{{ ("/faq/#q-" + g.id + "-" + loop.index) | url | dump | safe }},"topic":{{ g.category | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}{% if not loop.last %},{% endif %}{% endfor %}
+{%- if collections.posts.length %},
+{%- for post in collections.posts %}
+{"q":{{ post.data.title | dump | safe }},"a":{{ (post.data.pageDescription or "") | truncate(160) | dump | safe }},"url":{{ post.url | url | dump | safe }},"topic":"From the blog"}{% if not loop.last %},{% endif %}
+{%- endfor %}
+{%- endif %}
 ]
