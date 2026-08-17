@@ -57,6 +57,47 @@
     });
   }
 
+  /* Build the scored question bank once: document frequencies over the QUESTION corpus, so a word
+     common to many questions ("ai") counts for less than a rare one ("replace"). Kept at module
+     scope, and exposed below, so the matcher can be batch-tested against real reader questions
+     rather than a copy of itself that is free to drift. */
+  function buildQuestionBank(rows) {
+    var df = {}, entries = (rows || []).map(function (row) {
+      var t = tokens(row.q).map(stem), uniq = {};
+      t.forEach(function (w) { uniq[w] = true; });
+      Object.keys(uniq).forEach(function (w) { df[w] = (df[w] || 0) + 1; });
+      return { q: row.q, a: row.a, url: row.url, topic: row.topic, terms: uniq, len: t.length || 1 };
+    });
+    return { entries: entries, df: df, n: entries.length };
+  }
+
+  function matchQuestions(bank, query) {
+    var qt = tokens(query).map(stem);
+    if (!qt.length || !bank.entries.length) return [];
+    var scored = bank.entries.map(function (e) {
+      var s = 0, hits = 0;
+      for (var i = 0; i < qt.length; i++) {
+        if (e.terms[qt[i]]) {
+          s += Math.log(1 + bank.n / (1 + (bank.df[qt[i]] || 0)));   // rarer word, more signal
+          hits++;
+        }
+      }
+      // normalise by question length so a long question does not win just by having more words
+      return { e: e, score: hits ? s / Math.sqrt(e.len) : 0, hits: hits };
+    }).filter(function (x) { return x.hits > 0; })
+      .sort(function (a, b) { return b.score - a.score; });
+
+    if (!scored.length) return [];
+    /* Show up to FIVE options, not one. Measured against 20 real reader questions: the top-ranked
+       question is right about half the time, but a genuinely useful one is in the top few far more
+       often ("is my job safe from AI?" ranks the right answer 2nd, "am i getting worse at my job?"
+       3rd). No lexical score can tell that "safe" is incidental and "job" is the topic, so the honest
+       answer is to present the closest OPTIONS and let the reader pick. The relative cutoff still
+       drops anything far behind the leader, so weak noise is not padded in to reach five. */
+    var best = scored[0].score;
+    return scored.filter(function (x) { return x.score >= best * 0.45; }).slice(0, 5).map(function (x) { return x.e; });
+  }
+
   window.SearchEnhance = function (opts) {
     var container = typeof opts.container === "string"
       ? document.querySelector(opts.container) : opts.container;
@@ -75,39 +116,11 @@
        common to many questions ("ai") counts for less than a rare one ("replace"). */
     function faqBank() {
       if (faq) return faq;
-      faq = fetch(faqIndexUrl).then(function (r) { return r.json(); }).then(function (rows) {
-        var df = {}, entries = rows.map(function (row) {
-          var t = tokens(row.q).map(stem);
-          var uniq = {};
-          t.forEach(function (w) { uniq[w] = true; });
-          Object.keys(uniq).forEach(function (w) { df[w] = (df[w] || 0) + 1; });
-          return { q: row.q, a: row.a, url: row.url, topic: row.topic, terms: uniq, len: t.length || 1 };
-        });
-        return { entries: entries, df: df, n: entries.length };
-      }).catch(function () { return { entries: [], df: {}, n: 0 }; });
+      faq = fetch(faqIndexUrl)
+        .then(function (r) { return r.json(); })
+        .then(buildQuestionBank)
+        .catch(function () { return { entries: [], df: {}, n: 0 }; });
       return faq;
-    }
-
-    function closestQuestions(bank, query) {
-      var qt = tokens(query).map(stem);
-      if (!qt.length || !bank.entries.length) return [];
-      var scored = bank.entries.map(function (e) {
-        var s = 0, hits = 0;
-        for (var i = 0; i < qt.length; i++) {
-          if (e.terms[qt[i]]) {
-            s += Math.log(1 + bank.n / (1 + (bank.df[qt[i]] || 0)));   // rarer word, more signal
-            hits++;
-          }
-        }
-        // normalise by question length so a long question does not win just by having more words
-        return { e: e, score: hits ? s / Math.sqrt(e.len) : 0, hits: hits };
-      }).filter(function (x) { return x.hits > 0; })
-        .sort(function (a, b) { return b.score - a.score; });
-
-      if (!scored.length) return [];
-      // keep only what is genuinely close to the best match, so weak noise is not presented as an answer
-      var best = scored[0].score;
-      return scored.filter(function (x) { return x.score >= best * 0.55; }).slice(0, 3).map(function (x) { return x.e; });
     }
 
     async function closestPages(pf, query) {
@@ -199,7 +212,7 @@
       reportGap(query);
       try {
         var bank = faqIndexUrl ? await faqBank() : { entries: [], df: {}, n: 0 };
-        var questions = closestQuestions(bank, query);
+        var questions = matchQuestions(bank, query);
 
         var pf = await pagefind();
         var pages = await closestPages(pf, query);
@@ -254,4 +267,10 @@
     });
     observer.observe(container, { childList: true, subtree: true, characterData: true });
   };
+
+  // exposed so the matcher can be batch-tested against real reader questions (checklist 25 item 14k6)
+  window.SearchEnhance.buildQuestionBank = buildQuestionBank;
+  window.SearchEnhance.matchQuestions = matchQuestions;
+  window.SearchEnhance.tokens = tokens;
+  window.SearchEnhance.stem = stem;
 })();
