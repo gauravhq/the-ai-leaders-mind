@@ -38,6 +38,9 @@ jobs:
         env:
           PATH_PREFIX: "/"
         run: npx @11ty/eleventy --output=_verify
+      # the search page links /pagefind/*, so index before the LINKS gate runs
+      - name: Index the verification build for search
+        run: npx pagefind --site _verify
       - name: Gate - verify built site (sitemap/feed/JSON-LD/links/em-dash/FAQ>=100)
         run: python ci/verify_site.py _verify
       # --- deploy build (project pathPrefix) ---
@@ -45,6 +48,8 @@ jobs:
         env:
           PATH_PREFIX: "/the-ai-leaders-mind/"
         run: npx @11ty/eleventy
+      - name: Build the search index (Pagefind)
+        run: npx pagefind --site _site
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

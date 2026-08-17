@@ -9,6 +9,7 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "pagefind": "^1.5.2"
   }
 }

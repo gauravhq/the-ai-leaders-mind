@@ -1,0 +1,57 @@
+---
+layout: base.njk
+permalink: /search/
+title: Search
+pageDescription: Search every post and answer on The AI Leader's Mind by Gaurav Srivastava - judgment, trust, bias, resilience, and ethics when a machine is in the room.
+---
+<section class="section"><div class="wrap" style="max-width:820px" data-pagefind-ignore>
+  <div class="eyebrow">Search</div>
+  <h1>Find it in the writing</h1>
+  <p class="lead">Search every blog post and every FAQ answer on this site. Results update as you type.</p>
+
+  <div id="search" style="margin-top:22px"></div>
+  <noscript><p>Search needs JavaScript. You can still browse <a href="/blog/">all posts</a> or the <a href="/faq/">FAQ</a>.</p></noscript>
+
+  <p style="margin-top:26px;color:var(--ink-soft)">Looking for something broader? Browse <a href="/blog/">the blog</a>, the <a href="/faq/">FAQ</a>, or <a href="/book/">the book</a>.</p>
+</div></section>
+
+<link href="{{ '/pagefind/pagefind-ui.css' | url }}" rel="stylesheet">
+<style>
+  /* Theme the Pagefind UI with the site's own tokens so search does not look bolted on.
+     These MUST sit on .pagefind-ui, not on #search: Pagefind defines its own defaults on that
+     element, and a descendant's definition beats an inherited one. */
+  #search .pagefind-ui {
+    --pagefind-ui-scale: .85;
+    --pagefind-ui-primary: var(--amber-deep);
+    --pagefind-ui-text: var(--ink);
+    --pagefind-ui-background: var(--paper);
+    --pagefind-ui-border: var(--line, rgba(0,0,0,.15));
+    --pagefind-ui-tag: var(--cream);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: var(--radius);
+    --pagefind-ui-font: var(--sans, system-ui, sans-serif);
+  }
+  #search .pagefind-ui__result-title { font-family: "Playfair Display", Georgia, serif; }
+  /* form controls do not inherit a font, so set the search box explicitly */
+  #search .pagefind-ui__search-input,
+  #search .pagefind-ui__search-clear,
+  #search .pagefind-ui__button {
+    font-family: var(--sans, system-ui, sans-serif);
+    color: var(--ink);
+  }
+  #search .pagefind-ui__result-link { color: var(--ink); }
+  #search .pagefind-ui__result-link:hover { color: var(--amber-deep); }
+</style>
+<script src="{{ '/pagefind/pagefind-ui.js' | url }}"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    new PagefindUI({
+      element: "#search",
+      bundlePath: "{{ '/pagefind/' | url }}",
+      showImages: false,
+      showSubResults: true,     // surface the matching section of long pages (the FAQ especially)
+      pageSize: 8,
+      resetStyles: false,       // keep the site's own typography
+    });
+  });
+</script>
