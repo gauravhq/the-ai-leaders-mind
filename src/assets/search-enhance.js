@@ -1,16 +1,19 @@
-/* Rescue natural-language queries that Pagefind's strict AND matching drops to zero.
+/* Closest matches for question-shaped searches. There is no "no results" state.
  *
- * Pagefind requires EVERY term to appear on a page. So "will i be replaced by AI in a few years?"
- * returns nothing, even though "replaced by AI" returns five good pages: the words "few" and "years"
- * never co-occur with the rest. People ask questions, so this is the common case, not the edge case.
+ * Pagefind matches strict AND, so every word must appear on one page. Readers type questions, so an
+ * exact match is the exception, not the rule: "will i be replaced by AI in a few years?" finds
+ * nothing, even though the FAQ literally answers "Will AI replace managers and leaders?".
  *
- * When the UI reports no results, this:
- *   1. strips filler words and punctuation,
- *   2. retries with progressively fewer, more distinctive terms (longest first),
- *   3. renders whatever it finds as "Closest matches",
- *   4. and if even that fails, offers real next steps instead of a dead end.
+ * When the index has no exact hit this shows, in order:
+ *   1. CLOSEST QUESTIONS  matched question-to-question against the FAQ bank (/search-faq.json).
+ *      The FAQ is a bank of questions and the reader typed a question, so this is the most direct
+ *      comparison available, and it deep-links to the single answer.
+ *   2. CLOSEST PAGES      each meaningful word searched on its own, then merged and ranked by
+ *      Pagefind's own relevance score weighted by how rare the word is, how many of the query's
+ *      words the page covers, and whether the word is in the title.
+ *   3. NEXT STEPS         FAQ / all posts / the book, so nothing ever dead-ends.
  *
- * Attach with SearchEnhance({ container, bundlePath, links }).
+ * Attach with SearchEnhance({ container, bundlePath, faqIndex, links }).
  */
 (function () {
   var STOP = ("a an the and or but if then than that this these those is are was were be been being am "
@@ -19,23 +22,33 @@
     + "of in on at by for with about against between into through during to from up down out off over under "
     + "again further once here there all any both each few more most other some such no nor not only own same "
     + "so too very just now get got make made go goes going want need really actually maybe perhaps ever never "
-    + "am also because as until while about myself yourself does doesn dont don t s re ll ve"
+    + "also because as until while myself yourself dont don t s re ll ve im ive"
   ).split(" ");
   var STOPSET = {};
   for (var i = 0; i < STOP.length; i++) STOPSET[STOP[i]] = true;
 
-  function words(q) {
-    return String(q || "").toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(Boolean);
+  /* Crude suffix stripping so "replaced", "replace" and "replacing" collide. Deliberately gentle:
+     a real stemmer is not worth shipping, and over-stemming creates nonsense matches. */
+  function stem(w) {
+    if (w.length <= 4) return w;
+    w = w.replace(/(ations|ation|ingly|ing|edly|ed|ies|ly|es|s)$/, "");
+    /* Also drop a trailing "e", or the halves never meet: the reader's "replaced" reduces to
+       "replac" while the FAQ's "replace" stays whole, and the one question that answers them
+       ("Will AI replace managers and leaders?") is missed. */
+    return w.replace(/e$/, "");
   }
 
-  /* Keep 2-letter words: acronyms like "AI" are among the most distinctive terms on these sites. */
-  function contentWords(q) {
-    var seen = {};
-    return words(q).filter(function (w) {
-      if (STOPSET[w] || w.length < 2 || seen[w]) return false;
+  function tokens(q) {
+    var raw = String(q || "").toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/);
+    var out = [], seen = {};
+    for (var i = 0; i < raw.length; i++) {
+      var w = raw[i];
+      if (!w || STOPSET[w] || w.length < 2) continue;
+      if (seen[w]) continue;
       seen[w] = true;
-      return true;
-    });
+      out.push(w);
+    }
+    return out;
   }
 
   function esc(s) {
@@ -49,12 +62,106 @@
       ? document.querySelector(opts.container) : opts.container;
     if (!container) return;
     var bundlePath = opts.bundlePath;
+    var faqIndexUrl = opts.faqIndex;
     var links = opts.links || [];
-    var api = null, busy = false, lastTried = "";
+    var api = null, faq = null, busy = false, lastTried = "";
 
     function pagefind() {
       if (!api) api = import(bundlePath + "pagefind.js");
       return api;
+    }
+
+    /* Load the question bank once, and precompute document frequencies over the QUESTIONS so a word
+       common to many questions ("ai") counts for less than a rare one ("replace"). */
+    function faqBank() {
+      if (faq) return faq;
+      faq = fetch(faqIndexUrl).then(function (r) { return r.json(); }).then(function (rows) {
+        var df = {}, entries = rows.map(function (row) {
+          var t = tokens(row.q).map(stem);
+          var uniq = {};
+          t.forEach(function (w) { uniq[w] = true; });
+          Object.keys(uniq).forEach(function (w) { df[w] = (df[w] || 0) + 1; });
+          return { q: row.q, a: row.a, url: row.url, topic: row.topic, terms: uniq, len: t.length || 1 };
+        });
+        return { entries: entries, df: df, n: entries.length };
+      }).catch(function () { return { entries: [], df: {}, n: 0 }; });
+      return faq;
+    }
+
+    function closestQuestions(bank, query) {
+      var qt = tokens(query).map(stem);
+      if (!qt.length || !bank.entries.length) return [];
+      var scored = bank.entries.map(function (e) {
+        var s = 0, hits = 0;
+        for (var i = 0; i < qt.length; i++) {
+          if (e.terms[qt[i]]) {
+            s += Math.log(1 + bank.n / (1 + (bank.df[qt[i]] || 0)));   // rarer word, more signal
+            hits++;
+          }
+        }
+        // normalise by question length so a long question does not win just by having more words
+        return { e: e, score: hits ? s / Math.sqrt(e.len) : 0, hits: hits };
+      }).filter(function (x) { return x.hits > 0; })
+        .sort(function (a, b) { return b.score - a.score; });
+
+      if (!scored.length) return [];
+      // keep only what is genuinely close to the best match, so weak noise is not presented as an answer
+      var best = scored[0].score;
+      return scored.filter(function (x) { return x.score >= best * 0.55; }).slice(0, 3).map(function (x) { return x.e; });
+    }
+
+    async function closestPages(pf, query) {
+      var terms = tokens(query).slice(0, 6);
+      if (!terms.length) return { docs: [], terms: [] };
+
+      var per = await Promise.all(terms.map(async function (t) {
+        try {
+          var r = await pf.search(t);
+          return { term: t, total: r ? r.results.length : 0, hits: r ? r.results.slice(0, 8) : [] };
+        } catch (e) { return { term: t, total: 0, hits: [] }; }
+      }));
+
+      var matched = per.filter(function (p) { return p.hits.length; });
+      if (!matched.length) return { docs: [], terms: [] };
+
+      var docs = {};
+      for (var j = 0; j < matched.length; j++) {
+        var p = matched[j];
+        /* Weight the word by rarity. Used ALONE this misleads (a throwaway word can be the rarest),
+           which is why it only ever multiplies Pagefind's own relevance score below. */
+        var idf = 1 / Math.log(2 + p.total);
+        var datas = await Promise.all(p.hits.map(function (h) { return h.data(); }));
+        for (var d = 0; d < datas.length; d++) {
+          var doc = datas[d], key = doc.url;
+          if (!docs[key]) {
+            docs[key] = {
+              url: doc.url,
+              title: (doc.meta && doc.meta.title) ? doc.meta.title : doc.url,
+              excerpt: String(doc.plain_excerpt || doc.excerpt || "").replace(/<[^>]*>/g, ""),
+              score: 0, covered: 0
+            };
+          }
+          var titleBoost = (docs[key].title || "").toLowerCase().indexOf(p.term) >= 0 ? 1.6 : 1;
+          docs[key].score += (p.hits[d].score || 1) * idf * titleBoost;
+          docs[key].covered += 1;
+        }
+      }
+
+      var list = Object.keys(docs).map(function (k) { return docs[k]; });
+      list.forEach(function (x) {
+        // a page answering MORE of the question beats one that merely repeats a single word
+        x.score *= (1 + 0.5 * (x.covered - 1));
+      });
+      list.sort(function (a, b) { return b.score - a.score; });
+      return { docs: list.slice(0, 5), terms: matched.map(function (m) { return m.term; }) };
+    }
+
+    function nextSteps(lead) {
+      var html = '<p class="search-fallback__note">' + lead + "</p>" + '<ul class="search-fallback__links">';
+      for (var i = 0; i < links.length; i++) {
+        html += '<li><a href="' + esc(links[i].url) + '">' + esc(links[i].label) + "</a></li>";
+      }
+      return html + "</ul>";
     }
 
     function panel() {
@@ -72,24 +179,9 @@
       if (el) el.remove();
     }
 
-    /* `brief` appends the next-steps row under partial results; without it this is the whole
-       message for a query nothing matched at all. Either way the reader is never left at a dead end. */
-    function suggestions(query, brief) {
-      var html = brief
-        ? '<p class="search-fallback__note">Still not it? Try a shorter phrase, or:</p>'
-        : '<p class="search-fallback__note">Nothing on the site matches <strong>' + esc(query)
-          + "</strong>. Try a shorter phrase, or start here:</p>";
-      html += '<ul class="search-fallback__links">';
-      for (var i = 0; i < links.length; i++) {
-        html += '<li><a href="' + esc(links[i].url) + '">' + esc(links[i].label) + "</a></li>";
-      }
-      return html + "</ul>";
-    }
-
-    /* A question with no answer is a CONTENT signal, not just a dead end: it is the reader telling
-       you what the FAQ or the blog is missing. A static site has no backend to log to, so report it
-       to whichever privacy-light analytics the site already loads. Fires only if one is configured,
-       so the default build sends nothing anywhere. */
+    /* A question with no answer is a CONTENT signal: the reader is telling you what the FAQ is
+       missing. Reported to whichever privacy-light analytics the site already loads, and nothing is
+       sent when none is configured, which is the default. */
     function reportGap(query) {
       try {
         if (typeof window.plausible === "function") {
@@ -106,50 +198,42 @@
       lastTried = query;
       reportGap(query);
       try {
+        var bank = faqIndexUrl ? await faqBank() : { entries: [], df: {}, n: 0 };
+        var questions = closestQuestions(bank, query);
+
         var pf = await pagefind();
-        var terms = contentWords(query).slice(0, 6);
+        var pages = await closestPages(pf, query);
 
-        /* Pagefind is strict AND, so ONE unlucky word ("years") kills the whole query. Rather than
-           guess which subset to keep, search each term on its own and rank pages by HOW MANY of the
-           query's terms they match (classic coordination scoring). A page about being replaced by AI
-           matches two terms and outranks a page that merely mentions years. */
-        var perTerm = await Promise.all(terms.map(async function (t) {
-          try {
-            var r = await pf.search(t);
-            var all = r ? r.results : [];
-            return { term: t, total: all.length, hits: all.slice(0, 6) };
-          } catch (e) { return { term: t, total: 0, hits: [] }; }
-        }));
-
-        /* Show a small group per word, in the order the reader typed them.
-           Deliberately NOT a cleverer merged ranking: tried that, and purely statistical scoring
-           cannot tell that "years" is incidental to this question while "replaced" is the point.
-           Rarity ranked the throwaway word first; frequency ranked the generic hub pages first.
-           Grouping is honest and predictable, and it puts the reader in charge of choosing. */
-        var groups = perTerm.filter(function (p) { return p.hits.length; }).slice(0, 3);
-
-        if (groups.length) {
-          var html = '<p class="search-fallback__note">No page contains every word of <strong>'
-            + esc(query) + "</strong>. Here is what each word finds:</p>";
-          for (var g = 0; g < groups.length; g++) {
-            var datas = await Promise.all(groups[g].hits.slice(0, 3).map(function (h) { return h.data(); }));
-            html += '<p class="search-fallback__term">' + esc(groups[g].term)
-              + ' <span>' + groups[g].total + (groups[g].total === 1 ? " page" : " pages") + "</span></p>"
-              + '<ul class="search-fallback__results">';
-            datas.forEach(function (doc) {
-              html += '<li><a href="' + esc(doc.url) + '">'
-                + esc((doc.meta && doc.meta.title) ? doc.meta.title : doc.url) + '</a><span>'
-                + esc(String(doc.excerpt || "").replace(/<[^>]*>/g, "").slice(0, 110)) + "</span></li>";
-            });
-            html += "</ul>";
-          }
-          panel().innerHTML = html + suggestions(query, true);
-          busy = false;
-          return;
+        var html = "";
+        if (questions.length || pages.docs.length) {
+          html += '<p class="search-fallback__note">No page matches every word of <strong>'
+            + esc(query) + "</strong>. Here is the closest the site has:</p>";
         }
-        panel().innerHTML = suggestions(query);
+
+        if (questions.length) {
+          html += '<p class="search-fallback__term">Closest questions</p><ul class="search-fallback__results">';
+          questions.forEach(function (e) {
+            html += '<li><a href="' + esc(e.url) + '">' + esc(e.q) + "</a><span>"
+              + esc(String(e.a || "").slice(0, 120)) + "</span></li>";
+          });
+          html += "</ul>";
+        }
+
+        if (pages.docs.length) {
+          html += '<p class="search-fallback__term">Closest pages <span>matching '
+            + esc(pages.terms.join(", ")) + "</span></p><ul class=\"search-fallback__results\">";
+          pages.docs.forEach(function (d) {
+            html += '<li><a href="' + esc(d.url) + '">' + esc(d.title) + "</a><span>"
+              + esc(d.excerpt.slice(0, 120)) + "</span></li>";
+          });
+          html += "</ul>";
+        }
+
+        panel().innerHTML = html
+          ? html + nextSteps("Still not it? Try a shorter phrase, or:")
+          : nextSteps("Nothing on the site matches <strong>" + esc(query) + "</strong>. Try a shorter phrase, or:");
       } catch (e) {
-        panel().innerHTML = suggestions(query);
+        panel().innerHTML = nextSteps("Search hit a problem. Try:");
       }
       busy = false;
     }
@@ -159,7 +243,7 @@
       return input ? input.value.trim() : "";
     }
 
-    // The default UI does not expose a "no results" hook, so watch what it renders.
+    // the default UI exposes no "no results" hook, so watch what it renders
     var observer = new MutationObserver(function () {
       var msg = container.querySelector(".pagefind-ui__message");
       var hasResults = container.querySelector(".pagefind-ui__result");

@@ -1,0 +1,13 @@
+---
+permalink: /search-faq.json
+eleventyExcludeFromCollections: true
+---
+{#- A tiny question bank for search to match against.
+
+    Readers type QUESTIONS, and the FAQ is a bank of questions, so matching question-to-question is
+    far more accurate than matching a question against page prose. Fetched lazily, only when a search
+    needs it. Each entry deep-links to the single answer, which faq.njk expands on arrival. -#}
+{%- set out = [] -%}
+[{% for g in faqs.groups %}{% for item in g.items %}{% if not loop.first or not g.id %}{% endif %}
+{"q":{{ item.q | dump | safe }},"a":{{ item.a | truncate(160) | dump | safe }},"url":{{ ("/faq/#q-" + g.id + "-" + loop.index) | url | dump | safe }},"topic":{{ g.category | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}{% if not loop.last %},{% endif %}{% endfor %}
+]

@@ -20,7 +20,7 @@ pageDescription: Answers to common questions about leading with AI - The AI Lead
   <section class="faq-group" id="{{ g.id }}">
     <h2>{{ g.category }}</h2>
     {% for item in g.items %}
-    <details class="faq">
+    <details class="faq" id="q-{{ g.id }}-{{ loop.index }}">
       <summary>{{ item.q }}</summary>
       <div class="faq-a"><p>{{ item.a }}</p></div>
     </details>
@@ -30,3 +30,19 @@ pageDescription: Answers to common questions about leading with AI - The AI Lead
 
   <p class="faq-more" style="margin-top:28px"><a href="/book/">Read more about the book &rarr;</a>{% if site.amazon.kindle %} &nbsp;&middot;&nbsp; <a href="{{ site.amazon.kindle }}" target="_blank" rel="noopener">Get it on Kindle</a>{% endif %}</p>
 </div></section>
+<script>
+  /* Search links to a single question. Open that accordion and put it in view, instead of
+     landing on a collapsed row the reader then has to hunt for. */
+  (function () {
+    function openTarget() {
+      var id = location.hash.slice(1);
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (!el) return;
+      var d = el.tagName === "DETAILS" ? el : el.closest("details");
+      if (d) { d.open = true; d.scrollIntoView({ block: "center" }); }
+    }
+    window.addEventListener("hashchange", openTarget);
+    openTarget();
+  })();
+</script>
