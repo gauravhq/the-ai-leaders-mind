@@ -1,0 +1,109 @@
+{# Universal search overlay. Included once from base.njk, so search is reachable from every page.
+
+   Progressive enhancement: the header trigger is a real <a href="/search/">, so people without
+   JavaScript (and crawlers) still get the full search page. JS intercepts the click and opens this
+   dialog instead. The Pagefind bundle is fetched on FIRST OPEN only, so pages that never use search
+   pay nothing for it. #}
+<div class="search-modal" id="searchModal" hidden data-pagefind-ignore>
+  <div class="search-modal__backdrop" data-search-close></div>
+  <div class="search-modal__panel" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle">
+    <div class="search-modal__head">
+      <h2 class="search-modal__title" id="searchModalTitle">Search this site</h2>
+      <button type="button" class="search-modal__close" data-search-close aria-label="Close search">&times;</button>
+    </div>
+    <div id="searchModalUi"></div>
+    <p class="search-modal__hint">Searching every post and answer on this site. Press <kbd>Esc</kbd> to close.</p>
+  </div>
+</div>
+<script>
+(function () {
+  var modal = document.getElementById("searchModal");
+  var mount = document.getElementById("searchModalUi");
+  if (!modal || !mount) return;
+
+  var loaded = false, lastFocus = null;
+  var BUNDLE = "{{ '/pagefind/' | url }}";
+
+  function loadOnce() {
+    if (loaded) return Promise.resolve();
+    loaded = true;
+    return new Promise(function (resolve) {
+      var css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = BUNDLE + "pagefind-ui.css";
+      document.head.appendChild(css);
+      var js = document.createElement("script");
+      js.src = BUNDLE + "pagefind-ui.js";
+      js.onload = function () {
+        new PagefindUI({
+          element: "#searchModalUi",
+          bundlePath: BUNDLE,
+          showImages: false,
+          showSubResults: true,
+          pageSize: 6,
+          resetStyles: false,
+        });
+        resolve();
+      };
+      js.onerror = function () {
+        mount.innerHTML = '<p>Search could not load. <a href="{{ '/search/' | url }}">Open the search page</a>.</p>';
+        resolve();
+      };
+      document.head.appendChild(js);
+    });
+  }
+
+  function focusInput() {
+    var i = modal.querySelector(".pagefind-ui__search-input");
+    if (i) { i.focus(); i.select(); }
+  }
+
+  function open(e) {
+    if (e) e.preventDefault();
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.documentElement.style.overflow = "hidden";
+    loadOnce().then(function () { setTimeout(focusInput, 30); });
+  }
+
+  function close() {
+    modal.hidden = true;
+    document.documentElement.style.overflow = "";
+    // return focus where it came from; opened by shortcut there is no prior control, so land on the lens
+    var back = (lastFocus && lastFocus !== document.body && lastFocus.focus)
+      ? lastFocus
+      : document.querySelector("[data-search-open]");
+    if (back && back.focus) back.focus();
+  }
+
+  // header trigger(s): keep the href working when JS is off, hijack it when JS is on
+  Array.prototype.forEach.call(document.querySelectorAll("[data-search-open]"), function (el) {
+    el.addEventListener("click", open);
+  });
+  Array.prototype.forEach.call(modal.querySelectorAll("[data-search-close]"), function (el) {
+    el.addEventListener("click", close);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    var typing = /^(INPUT|TEXTAREA|SELECT)$/.test((e.target.tagName || "")) || e.target.isContentEditable;
+    // Ctrl/Cmd F opens SITE search instead of find-in-page: this searches every post and answer,
+    // not just the page you happen to be on. Ctrl/Cmd K is kept as the usual palette convention.
+    if ((e.key === "f" || e.key === "F" || e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) {
+      if (!modal.hidden && (e.key === "f" || e.key === "F")) return;  // second press falls back to the browser's own find
+      e.preventDefault();
+      open();
+      return;
+    }
+    if (e.key === "/" && !typing && modal.hidden) { e.preventDefault(); open(); return; }
+    if (modal.hidden) return;
+    if (e.key === "Escape") { close(); return; }
+    if (e.key === "Tab") {                       // keep focus inside the dialog
+      var f = modal.querySelectorAll('a[href], button, input, [tabindex]:not([tabindex="-1"])');
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>

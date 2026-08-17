@@ -40,7 +40,9 @@
         <a href="/book/">The Book</a>
         <a href="/blog/">Blog</a>
         <a href="/author/">Author</a>
-        <a href="/search/">Search</a>
+        <a class="nav-search" href="/search/" data-search-open aria-label="Search this site" title="Search this site (Ctrl F)">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+        </a>
       </nav>
     </div>
   </header>
@@ -57,5 +59,6 @@
       <p>&copy; {% year %} {{ site.author }}. All rights reserved.</p>
     </div>
   </footer>
+  {% include "search-modal.njk" %}
 </body>
 </html>

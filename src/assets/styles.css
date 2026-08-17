@@ -150,10 +150,71 @@ article.post h2, article.post h3 { text-transform: none; margin-top: 28px; }
 .site-footer { padding: 40px 0; text-align: center; color: var(--ink-soft); }
 .site-footer a { color: var(--amber-deep); }
 
+/* ---- universal search: header lens + overlay ---- */
+.nav-search {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; margin-left: 16px; border-radius: 50%;
+  color: var(--ink); vertical-align: middle; transition: background-color .15s, color .15s;
+}
+.nav-search svg {
+  width: 18px; height: 18px; display: block;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round;
+}
+.nav-search:hover, .nav-search:focus-visible { background: rgba(58, 44, 27, .08); color: var(--amber-deep); }
+
+.search-modal[hidden] { display: none; }
+.search-modal {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 9vh 16px 16px;
+}
+.search-modal__backdrop { position: absolute; inset: 0; background: rgba(26, 20, 12, .5); }
+.search-modal__panel {
+  position: relative; width: 100%; max-width: 640px;
+  background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .3);
+  padding: 16px 18px 14px; max-height: 78vh; overflow: auto;
+  animation: searchIn .16s ease-out;
+}
+@keyframes searchIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .search-modal__panel { animation: none; } }
+.search-modal__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.search-modal__title { font-size: 15px; margin: 0; color: var(--ink-soft); font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.search-modal__close {
+  background: none; border: 0; cursor: pointer; line-height: 1;
+  font-size: 26px; color: var(--ink-soft); padding: 0 4px; border-radius: 6px;
+}
+.search-modal__close:hover { color: var(--amber-deep); }
+.search-modal__hint { margin: 12px 2px 0; font-size: 12px; color: var(--ink-soft); font-family: var(--sans); }
+.search-modal__hint kbd {
+  font-family: var(--sans); font-size: 11px; border: 1px solid var(--line);
+  border-radius: 4px; padding: 1px 5px; background: var(--paper);
+}
+/* the overlay uses the site's own tokens, same as the /search/ page */
+#searchModalUi .pagefind-ui {
+  --pagefind-ui-scale: .85;
+  --pagefind-ui-primary: var(--amber-deep);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--cream);
+  --pagefind-ui-border: var(--line);
+  --pagefind-ui-tag: var(--paper);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: var(--radius);
+  --pagefind-ui-font: var(--sans, system-ui, sans-serif);
+}
+#searchModalUi .pagefind-ui__result-title { font-family: "Playfair Display", Georgia, serif; }
+#searchModalUi .pagefind-ui__search-input,
+#searchModalUi .pagefind-ui__search-clear,
+#searchModalUi .pagefind-ui__button { font-family: var(--sans, system-ui, sans-serif); color: var(--ink); }
+
 @media (max-width: 760px) {
   .hero .wrap { grid-template-columns: 1fr; text-align: center; }
   .hero .sub { margin: 0 auto; }
   .hero .btn-row { justify-content: center; }
   .grid2 { grid-template-columns: 1fr; }
   .cover-shot { order: -1; }
+  /* a comfortable touch target, and the overlay sits higher with less chrome */
+  .nav-search { width: 40px; height: 40px; margin-left: 8px; }
+  .search-modal { padding: 4vh 10px 10px; }
+  .search-modal__panel { max-height: 88vh; }
 }
